@@ -1,0 +1,1 @@
+[{"A":"Aprovado"},{"P":"Pendente"}]

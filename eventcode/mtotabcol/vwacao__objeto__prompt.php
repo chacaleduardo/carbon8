@@ -1,0 +1,1 @@
+[{"EQUIPAMENTO":"Equipamento"},{"SGDOC":"Processo"},{"PESSOA":"Fornecedor"}]

@@ -1,0 +1,147 @@
+@media print {
+  * {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+* {
+	text-shadow: none !important;
+	filter:none !important;
+	-ms-filter:none !important;
+	font-family: Helvetica, Arial;
+	font-size: 12px;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box; 
+}
+html{
+	background-color: silver;
+}
+body {
+	line-height: 1.4em;
+	background-color: white;
+}
+
+@media screen{
+	body {
+		margin: auto;
+		margin-top: 0.2cm;
+		margin-bottom: 1cm;
+		padding: 3mm 10mm;
+		width: 21cm;
+	}
+	.quebrapagina{
+		page-break-before:always;
+		border: 2px solid #c0c0c0;
+		width: 200%;
+		margin: 1.5cm -100px;
+	}
+	.rot{
+		color: gray;
+	}
+	
+}
+
+@media print{
+	html{
+		background-color: transparent;
+	}
+	body {
+		margin: 0cm;
+	}
+	.quebrapagina{
+		page-break-before:always;		
+	}
+	.rot{
+		color: #777777;
+	}
+}
+[class*='5']{width: 5%;}
+[class*='10']{width: 9%;}
+[class*='15']{width: 15%;}
+[class*='20']{width: 20%;}
+[class*='25']{width: 25%;}
+[class*='30']{width: 30%;}
+[class*='35']{width: 35%;}
+[class*='40']{width: 39.99%;}
+[class*='45']{width: 45%;}
+[class*='50']{width: 50%;}
+[class*='55']{width: 55%;}
+[class*='60']{width: 60%;}
+[class*='65']{width: 65%;}
+[class*='70']{width: 70%;}
+[class*='75']{width: 75%;}
+[class*='80']{width: 80%;}
+[class*='85']{width: 85%;}
+[class*='90']{width: 90%;}
+[class*='95']{width: 95%;}
+[class*='100']{width: 100%;}
+header{
+	 background-color: white;
+	 top: 0;
+	 height: 1cm;
+	 line-height: 1cm;
+	 display: table;
+}
+header + hr{
+	margin: 0;
+}
+.logosup{
+	height: inherit;
+	line-height: inherit;
+	display: table-cell;
+}
+.logosup img{
+	height: 0.5cm;
+	vertical-align: middle;
+}
+.titulodoc{
+	height: inherit;
+	line-height: inherit;
+	display: table-cell;
+	text-align: center;
+	font-size: 0.3cm;
+	font-weight: bold;
+}
+.row{
+	display: table;
+	table-layout: fixed;
+	width: 99%;
+	margin: 0mm 0mm;
+}
+.linhainferior{
+	border-bottom: 1px solid #f8f8f8;
+}
+.col{
+	display: table-cell;
+	white-space: nowrap;
+	padding: 1.5mm 1mm;
+}
+.row.grid .col{
+	border: 1px solid #777777;
+	
+}
+.row.grid .col:first-child{
+	border-top: 1px solid silver;
+}
+.col.grupo .titulogrupo{
+	margin: 0px;
+	border-bottom: 1px dotted silver;
+	color: #777777;
+	font-weight: bold;
+	margin-bottom: 2mm;
+}
+.rot{
+	color: #777777;
+	overflow: hidden;
+	font-size: 12px;
+}
+.quebralinha{
+	white-space: normal;
+}
+[class*='margem0.0']{
+	margin: 0 0;
+}
+.sublinhado{
+	border-bottom: 1px dashed gray;
+}

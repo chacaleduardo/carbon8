@@ -1,0 +1,31 @@
+@use 'variaveis'
+
+@each $shader, $color in variaveis.$grays
+    .text-gray-#{$shader}
+        color: RGB(#{$color}) !important
+
+    .bg-gray-#{$shader}
+        background-color: RGB(#{$color})
+
+    .border-gray-#{$shader}
+        border-color: RGB(#{$color})
+
+@each $classe, $cor in variaveis.$theme-color
+    .btn-#{$classe}
+        background-color: RGBA(#{$cor}, 1)
+        border-color: RGB(#{$cor})
+        color: RGBA(#{variaveis.$gray-10}) !important
+
+        &:hover
+            background-color: RGBA(#{$cor}, .9)
+            color: RGBA(#{variaveis.$gray-10}) !important
+    
+    .text-#{$classe}
+        color: RGB(#{$cor}) !important
+
+:root
+    @each $shader, $cor in variaveis.$grays
+        --gray-#{$shader}: #{$cor}
+
+    @each $classe, $cor in variaveis.$theme-color
+        --#{$classe}: #{$cor}

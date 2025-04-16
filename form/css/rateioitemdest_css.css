@@ -1,0 +1,49 @@
+div.rowitem {
+	border-bottom: dashed 1px #80808029;
+	margin-inline-start: auto;
+
+}
+
+div.rowitem2 {
+	border-bottom: dashed 1px #80808029;
+	margin-inline-start: auto;
+	background-color: #ffffff !important;
+}
+
+div.rowtipo {
+	background-color: #80808030;
+	margin-inline-start: auto;
+}
+
+div.rowcab {
+	background-color: #80808061;
+	margin-inline-start: auto;
+}
+
+tr.rowcab {
+	background-color: #80808061;
+	margin-inline-start: auto;
+}
+
+div.rowtipo:hover {
+	background: #DCDCDC !important;
+	color: black;
+	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+}
+
+div.rowitem:hover {
+	background: #80808054 !important;
+	color: black;
+	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+}
+
+div.rowitem2:hover {
+	background: #DCDCDC !important;
+	color: black;
+	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+}
+
+.text-al-r
+{
+	text-align: right;
+}

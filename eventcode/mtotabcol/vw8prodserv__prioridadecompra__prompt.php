@@ -1,0 +1,1 @@
+[{"ALTA":"Alta"},{"MEDIA":"Média"},{"BAIXA":"Baixa"}]

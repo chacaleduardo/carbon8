@@ -1,0 +1,18 @@
+#!/bin/bash
+LOG=/tmp/teste
+touch $LOG
+#Verifica se o arquivo estÃ¡ vazio. o Sed nÃ£o funcionarÃ¡ inserindo linhas no inÃ­cio de arquivos vazios
+#[ -s $LOG ] || echo "---------------" > $LOG
+OUT="--------------------"
+OUT+=`date '+%d-%m-%Y_%H:%M:%S'`
+OUT+="\n"
+OUT+="$(git -C /arquivos/backup/repos/git/carbon/ pull)"
+
+OUT+="$(rsync -v -ach --info=stats2,misc1,flist0 /arquivos/backup/repos/git/carbon/ /var/www/carbon8 --exclude 'inc/php/appvar.php' --exclude 'inc/tmp/' --exclude 'im/' --exclude 'tmp/' --exclude 'upload/' --exclude '.git/')"
+
+sed -i '1s/^/'"$OUT"'\n/' $LOG
+exit 0
+OUT+=$SYNC
+OUT+=$(eval $SYNC)
+#sed -i "1s/^/$OUT\n/" $LOG
+cat $LOG

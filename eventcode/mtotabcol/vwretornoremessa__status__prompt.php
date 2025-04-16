@@ -1,0 +1,1 @@
+[{"CONCLUIDO":"Concluido"},{"PENDENTE":"Pendente"}]

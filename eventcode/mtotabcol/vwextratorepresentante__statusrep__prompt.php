@@ -1,0 +1,1 @@
+[{"PENDENTE":"Pendente"},{"PAGAR":"Pagar"},{"QUITADO":"Quitado"},{"INATIVO":"Inativo"}]

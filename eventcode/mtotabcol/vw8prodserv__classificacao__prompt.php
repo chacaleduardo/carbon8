@@ -1,0 +1,1 @@
+[{"comissionado":"Comissionado"},{"comprado":"Comprado"},{"fabricado":"Formulado"},{"venda":"Venda"},{"nfe":"NFe"}]

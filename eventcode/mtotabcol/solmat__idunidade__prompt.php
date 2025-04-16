@@ -1,0 +1,1 @@
+[{"16":"Administração"},{"8":"Almoxarifado"},{"302":"Almoxarifado-Consumo"},{"4":"Biotério"},{"10":"CQ"},{"3":"CQD"},{"9":"Diag. Autogenas"},{"1":"Diagnóstico"},{"15":"Engenharia"},{"13":"Meios"},{"13":"P&D"},{"305":"P&D Escalonamento"},{"2":"Produção"},{"11":"Retém"},{"254":"RH"},{"253":"Sócios"},{"304":"TERCEIROS"},{"7":"Utilidades"}]

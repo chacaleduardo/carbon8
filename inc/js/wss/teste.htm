@@ -1,0 +1,97 @@
+<script type="text/javascript">
+
+/*
+ * Recupera informacoes da query string da URL conforme parametro passado
+ * Ex: http:localhost/index.php?acao=novo
+ * getUrlParameter("acao") = "novo"
+ */
+function getUrlParameter(name){
+   return decodeURIComponent(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,""])[1]
+    );
+}
+
+/*
+ * Validar Strings Json 
+ */
+function jsonStr2Object(str) {
+	var jsonTmp;
+    try {
+        jsonTmp = JSON.parse(str);
+    } catch (e) {
+    	console.error("Js: jsonStr2Object: Json informado inválido: "+str);
+        return false;
+    }
+    return jsonTmp;
+}
+
+// A function handler
+function notificacao(titleText, bodyText)
+{
+    if ('undefined' === typeof notification)
+        return false;       //Not supported....
+    var noty = new notification(
+        titleText, {
+            body: bodyText,
+            dir: 'auto', // or ltr, rtl
+            lang: 'EN', //lang used within the notification.
+            tag: 'notificationPopup', //An element ID to get/set the content
+            icon: '' //The URL of an image to be used as an icon
+        }
+    );
+    noty.onclick = function () {
+        console.log('notification.Click');
+    };
+    noty.onerror = function () {
+        console.log('notification.Error');
+    };
+    noty.onshow = function () {
+        console.log('notification.Show');
+    };
+    noty.onclose = function () {
+        console.log('notification.Close');
+    };
+    return true;
+}
+
+//Inicializa notificacoes
+var notification = window.Notification || window.mozNotification || window.webkitNotification;
+if ('undefined' === typeof notification){
+    alert('Notificações HTML5 não suportadas');
+}else{
+    notification.requestPermission(function(permission){});
+
+	var id = getUrlParameter("id");
+	var socket;
+
+	if(id){
+
+		socket = new WebSocket('ws://127.0.0.1:1337?id='+id);
+
+		socket.onopen = function () {
+		    socket.send('inicio');
+		};
+
+		socket.onmessage = function (msg) {
+			//console.log("wss:"+msg.data);
+            document.write("<br>wss:"+msg.data);
+			var sJson = jsonStr2Object(msg.data);
+			if(sJson && sJson.tipo=="ring"){
+				
+                titulo = (msg.data.origemnome=="EXTERNA")?"Ligação EXTERNA":msg.data.origemnome + " - " + msg.data.origemnum;
+                corpo = (msg.data.origemnome=="EXTERNA")?"Ligação EXTERNA":msg.data.origemnome + " - " + msg.data.origemnum;
+
+                notificacao(titulo,corpo);
+			}else{
+				//console.log(sJson);
+			}
+		};
+
+		socket.onerror = function (error) {
+		    console.log('WebSocket error: ' + error);
+		};
+	}else{
+		console.warn("Parâmetro GET[id] não informado.");
+	}
+}
+</script>

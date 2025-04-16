@@ -1,0 +1,1 @@
+[{"FOLHA":"Folha"},{"FERIAS":"Folha Férias"},{"DECIMOTERCEIRO1P":"Décimo Terceiro - 1P"},{"DECIMOTERCEIRO2P":"Décimo Terceiro - 2P"}]

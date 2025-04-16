@@ -1,0 +1,463 @@
+.tsep{/*tabela interna ao div separador de blocos de informacao*/
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	border-collapse: collapse;
+	/* width: 100%;*/
+}
+	.tsep .td{
+		border: none;
+		vertical-align: top;tdrot grrot
+	}
+	.tsep .tdlogo{
+		vertical-align: top;
+		width:130px;
+	}
+	.tsep .tdrot{/*td de rotulo*/
+		font-size: 7px;
+		color: rgb(102,102,102);
+		padding-left: 5px;
+		margin: 0px;
+		vertical-align: bottom;
+
+	}
+	.tsep .tdval{/*td de valor*/
+		font-size: 8pt;
+		padding-left: 5px;
+		margin: 0px;
+		vertical-align: bottom;
+		
+	}
+
+.nimptop{/*numero da impressao superior*/
+	border-bottom: 1px solid gray;
+	border-bottom-style: dotted;
+	font-size: 7pt;
+	color: rgb(90, 90, 90);
+	text-align: right;
+	float: right;
+	white-space: nowrap;
+}
+
+.nimptbot{/*numero da impressao inferior */
+	border-top: 1px solid gray;
+	border-top-style: dotted;
+	font-size: 7pt;
+	color: rgb(90, 90, 90);
+	text-align: right;
+	float: right;
+	white-space: nowrap;
+}
+.nimptbot2{/* inf inmetro inferior */
+	font-size: 7pt;
+	color: rgb(90, 90, 90);
+	text-align: right;
+	float: right;
+	white-space: nowrap;
+}
+.tbgr{/*tabela de agrupamento de informacoes*/
+	border: 1px solid rgb(225,225,225);
+	border-collapse: collapse;
+	width: 100%;
+
+}
+	.tbgr .grcab{/*cabecalho*/
+		background-color: rgb(225,225,225);
+		font-size: 7px;
+		color: rgb(76,76,76);
+		padding-left: 4px;
+		font-weight:normal;
+	}
+	.tbgr .grcabteste{/*cabecalho*/
+		background-color: rgb(225,225,225);
+		font-size: 8pt;
+		padding-left: 4px;
+		font-weight:normal;
+	} 
+	.tbgr .grrot{
+		border:1px solid rgb(225,225,225);
+		font-size: 7px;
+		color: rgb(102,102,102);
+		text-align: right;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.tbgr .grvalb{/*valor negrito*/
+		border:1px solid rgb(225,225,225);
+		font-size: 8pt;
+		font-weight: normal;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.tbgr .grval{/*valor SEM negrito*/
+		border:1px solid rgb(225,225,225);
+		font-size: 8pt;
+		padding-left: 4px;
+		padding-right: 4px;
+		height:10px !important;
+		line-height:10px !important;
+	}
+	.tbgr .lbrot{/*outras informacoe da amostra*/
+		font-size: 7px;
+		color: rgb(102,102,102);
+		text-align: right;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.tbgr .lbval{/*outras informacoe da amostra*/
+		font-size: 8pt;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+
+.dsepteste{/*tabela interna ao div separador de blocos de informacao*/
+	background-color: rgb(225,225,225);
+}
+
+.ft8cinza{
+	font-size: 7px;
+	color:  rgb(102,102,102);
+	font-weight: normal;
+}
+.MsoTableGrid td{     
+	padding: 0px !important;
+}
+.MsoTableGrid{
+	width:100% !important; 
+}
+
+p{ 
+	margin-top: 0px !important;
+    margin-bottom: 1px !important;
+	font-size: 7px !important;
+}
+.tabelisa {
+	border-collapse:collapse;
+	color:#333;
+	font-size:7px;
+}
+.tabelisa .trnormal td{
+	border:1px solid rgb(225,225,225);
+	color:#333;
+	font-size:7px;
+	padding-left:5px;
+	padding-right:5px;
+}
+.tabelisa .trnormal .gray{
+	border:1px solid rgb(225,225,225);
+	color: silver;
+	font-size:7px;
+}
+.tabelisa .hdr td {
+	background-color:#ccc; 
+	border:1px solid rgb(225,225,225);
+	color:#333;
+	font-size:7px;
+
+}
+.tabelisa .trpos td{
+
+	background-color: #FFC0C0;
+	font-family:Verdana, Geneva, sans-serif !important;
+	font-size: 7px;
+	color: #333;
+}
+
+#idfrasedit{
+width:100%;	
+}
+.resdesc {
+	color:#333;
+	font-size:7px; 
+	width:100%;
+	word-wrap:break-word;
+	
+}
+.resdesc span{
+	font-size:7px !important;
+}
+.resdesc table{
+	border: 1px solid #e1e1e1;
+	border-collapse:collapse;
+	width:100%;
+	padding:4px;
+	height: auto !important;
+}
+.resdesc table span{
+	font-size:7px !important;
+}
+.resdesc table th{
+	border: 1px solid silver;
+	font-size:10px;
+	
+}
+.resdesc table td{
+	border: 1px solid #e1e1e1;
+	font-size:7px !important;
+	padding:4px;
+	border-color:#e1e1e1 !important;
+}
+div strong, p strong, div{
+	font-size: 7px !important;
+}
+.tabass{
+	border:0px;
+	font-size:11;
+	padding:0px; 
+	margin:0px;
+	/*display:inline;*/
+}
+.tabass td{
+	padding:0px;
+	margin:0px;
+	padding-right:7px;
+}
+
+.tabass .lb6{/* label inferior à imagem da assinatura */
+	padding:0px;
+	margin:0px;
+	font-size:7px;
+}
+
+.tabass .lbresp{/* label inferior à imagem da assinatura */
+	padding:0px;
+	margin:0px;
+	font-size:7px;
+}
+
+
+.tborif{
+	border-collapse:collapse;
+	border-color:#333 -moz-use-text-color;
+	border-style:solid none;
+	border-width:0 medium;
+	margin-bottom:15px;
+	width:100%;
+}
+
+.tb .rot {
+	color:#333;
+	font-size:8pt;
+	padding-right:5px;
+	text-align:right;
+}
+
+.tb .rotx {
+	color:#333;
+	font-size:8pt;
+	padding-right:35px;
+	text-align:left;
+}
+
+.tb .rotvalres {
+	color:#333;
+	font-size:7px;
+	padding-left:15px;
+	text-align:left;
+}
+
+.tb .valres {
+	color:#333; 
+	font-size:10pt;
+	padding-right:5px;
+	text-align:left;
+}
+.fset{
+	border:1px solid silver;
+}
+.ftitulo{
+	font-size: 8px;
+	color: #333;
+	
+	font-weight:normal;
+	background-color:#fff !important;
+	border:none !important;
+	margin:0px !important;
+	padding:0px !important;
+}
+legend{
+	background-color:#eee !important;
+	border:none !important;
+	margin:0px !important;
+	padding:0px !important;
+	margin-bottom:3px !important;
+}
+fieldset{
+	
+	padding-left:4px !important;
+	padding-right:4px !important; 
+	padding-bottom:4px !important;
+	padding-top:1px !important;
+}
+.divfrase{
+	font-size:7px;
+	color:#333 !important;
+}
+.tabtitulos tr td{
+	font-size: 7px;
+}
+.cabtxt{
+	border:none;
+	padding:0px;
+	margin:0px;
+	font-size:7px;
+	color:gray;
+}
+.tablegenda tr td{
+	font-size: 7px !important;
+	color: #333;
+	padding: 0px;
+}
+
+u{ 
+	font-size: 7px !important;
+}
+
+
+
+/********************************************************************** jGrowl **************************************************************************************/
+
+div.jGrowl {
+	z-index: 			9999;
+	color: 				#fff;
+	font-size: 			12px;
+}
+
+/** Special IE6 Style Positioning **/
+div.ie6 {
+	position: 			absolute;
+}
+
+div.ie6.top-right {
+	right: 				auto;
+	bottom: 			auto;
+	left: 				expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div.ie6.top-left {
+	left: 				expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div.ie6.bottom-right {
+	left: 				expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div.ie6.bottom-left {
+	left: 				expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div.ie6.center {
+	left: 				expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+	width: 				100%;
+}
+
+/** Normal Style Positions **/
+div.jGrowl {
+	position:			absolute;
+}
+
+body > div.jGrowl {
+	position:			fixed;
+}
+
+div.jGrowl.top-left {
+	left: 				0px;
+	top: 				0px;
+}
+
+div.jGrowl.top-right {
+	right: 				0px;
+	top: 				0px;
+}
+
+div.jGrowl.bottom-left {
+	left: 				0px;
+	bottom:				0px;
+}
+
+div.jGrowl.bottom-right {
+	right: 				0px;
+	bottom: 			0px;
+}
+
+div.jGrowl.center {
+	top: 				0px;
+	width: 				50%;
+	left: 				25%;
+}
+
+
+
+/** Cross Browser Styling **/
+div.center div.jGrowl-notification, div.center div.jGrowl-closer {
+	margin-left: 		auto;
+	margin-right: 		auto;
+}
+
+div.jGrowl div.jGrowl-notification, div.jGrowl div.jGrowl-closer {
+	background-color: 		gray;
+	opacity: 				.85;
+	-ms-filter: 			"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; 
+	filter: 				progid:DXImageTransform.Microsoft.Alpha(Opacity=85); 
+	zoom: 					1;
+	min-width: 				70px;
+	padding: 				7px;
+	margin-top: 			5px;
+	margin-bottom: 			5px;
+	font-family:			Verdana, Geneva, sans-serif !important;
+	font-size: 				1em;
+	text-align: 			left;
+	display: 				none;
+	-moz-border-radius: 	5px;
+	-webkit-border-radius:	5px;
+}
+
+div.jGrowl div.jGrowl-notification {
+	min-height: 			7px;
+}
+
+div.jGrowl div.jGrowl-notification,
+div.jGrowl div.jGrowl-closer {
+	margin: 				3px;
+}
+
+div.jGrowl div.jGrowl-notification div.jGrowl-header {
+	font-weight: 			normal;
+	font-size:				.85em;
+}
+
+div.jGrowl div.jGrowl-notification div.jGrowl-close {
+	z-index:				99;
+	float: 					right;
+	font-weight: 			normal;
+	font-size: 				1em;
+	cursor:					pointer;
+}
+
+div.jGrowl div.jGrowl-closer {
+	padding-top: 			4px;
+	padding-bottom: 		4px;
+	cursor: 				pointer;
+	font-size:				7px;
+	font-weight: 			normal;
+	text-align: 			center;
+	opacity:				.3;
+}
+
+div.jGrowl  div.jgrowlblue{
+	background-color: blue;
+	font-weight: normal;
+	text-decoration: blink;
+}
+
+/** Hide jGrowl when printing **/
+@media print {
+	div.jGrowl {
+		display: 			none;
+	}
+}	

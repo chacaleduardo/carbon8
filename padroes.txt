@@ -1,0 +1,44 @@
+Criação dos Padrões de Projeto
+
+Padrão de Arquivos
+    - Arquivos de query, form_js e controllers são do formato Snake Case.
+        Ex: tagtipo_query.php, tagtipo_js.php, tagtipo_controller.php;
+
+
+Padrão de Classe 
+    - Pascal Case. Ex: class TagTipo{}
+
+
+Padrão de Variável 
+    - Camel Case. Ex: $variavelDoMetodo = "";
+
+
+Padrão de Função 
+    - Camel Case. Ex: function criarObjeto( $var ){};
+
+
+Padrão de Comentário 
+    - Começando com // sempre antes da função/método com o dia em que foi escrito e o @ do evento.
+        Ex: //PHOL 06/07/2022 @12345 - Evento X
+    - Comentários não são sobreescritos, caso a função/método já tenha sido comentada e posteriormente precise ser alterada,
+    um novo comentário será adicionado abaixo do comentário anterior.
+
+
+Padrão de Indentação 
+        Ex: 
+            function minhaFuncao($ex1, $ex2){
+                $lista = [1,2,3];
+                
+                if($ex1){
+                    $ex1 = false;
+                    foreach($lista as $k => $v){
+                        if($ex2 == $v) {
+                            break;
+                        }
+                    }
+                }else{
+                    $ex1 = true;
+                }
+
+                return null;
+            }

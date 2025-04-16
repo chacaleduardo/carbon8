@@ -1,0 +1,12 @@
+@use 'variaveis'
+
+@each $chave, $valor in variaveis.$peso-fonte
+    .font
+        &-#{$chave}
+            font-weight: #{$valor}
+
+@each $chave, $valor in variaveis.$tamanho-fonte
+    .text
+        &-#{$chave}
+            font-size: #{$valor}
+        

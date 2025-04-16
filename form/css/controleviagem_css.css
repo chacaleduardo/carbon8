@@ -1,0 +1,44 @@
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+#controle-viagem {
+    font-size: 14px;
+}
+
+#container-qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 260px;
+    background-color: #575656;
+    border-radius: 8px 8px 0 0 ;
+    padding: 40px;
+}
+
+#leitor-qrcode {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #7D7B7B;
+}
+
+#lanterna {
+    border-radius: 0 4px 4px 0 !important;
+}
+
+#status-leitura.com-lanterna {
+    border-radius: 4px 0 0 4px !important;
+}
+
+#qr-lido {
+    position: absolute;
+    background-color: #fff;
+    width: 80%;
+    height: 80%;
+    border-radius: 1rem;
+    color: #2cf58b;
+    font-size: 4rem;
+}

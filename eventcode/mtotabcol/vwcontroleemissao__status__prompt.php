@@ -1,0 +1,1 @@
+[{"ENVIADO":"Enviado"},{"PENDENTE":"Pendente"}]

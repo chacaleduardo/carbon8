@@ -1,0 +1,8 @@
+<?
+if(!empty($_SESSION["arrpostbuffer"][$row][$act][$tbl]["idempresa"])){
+    $VALOR_COLUNA_AUTOMATICA = false;
+}else{
+    $VALOR_COLUNA_AUTOMATICA = isset($_GET["_idempresa"])?$_GET["_idempresa"]:$_SESSION["SESSAO"]["IDEMPRESA"];
+}
+//@487013 - MULTI EMPRESA
+?>

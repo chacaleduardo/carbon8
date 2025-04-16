@@ -1,0 +1,1 @@
+[{"PEQUENO":"Pequeno"},{"MODERADO":"Moderado"},{"GRAVE":"Grave"}]

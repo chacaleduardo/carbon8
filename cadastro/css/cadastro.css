@@ -1,0 +1,15 @@
+
+.custom-gradient {
+    background: linear-gradient(200deg, #178B94, #001e33, #178B94),
+                radial-gradient(56.66% 481.32% at 96.42% 24.66%, #178B94 0%, rgba(0, 0, 0, 0) 100%),
+                radial-gradient(72.84% 1603.66% at 1.73% 26.86%, #178B94 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.required {
+    transition: .3s ease 0s;
+}
+
+.required.error {
+    border: 2px solid red;
+    background-color: #ff404012;
+}

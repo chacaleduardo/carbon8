@@ -1,0 +1,3 @@
+<?
+$VALOR_COLUNA_AUTOMATICA = date("d-m-Y H:i:s");
+?>

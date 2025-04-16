@@ -1,0 +1,273 @@
+#cbProgressBar{
+    overflow: hidden;
+    list-style-type: none;
+    padding-left: 0px !important;
+}
+#cbProgressBarAcoes{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+#cbProgressBar .divstatus > div {
+    padding: 3px;
+    align-items: center;
+}
+#cbProgressBar .divstatus > div > div{
+    padding-left: 10px;
+    background: #e6e6e6;
+    border-radius: 4px;
+   /* box-shadow: 1px 1px #d5d5d5;*/
+    text-transform: uppercase;
+    /*font-weight: bold;*/
+    font-size: 9px;
+    color: gray;
+    white-space: nowrap;
+}
+#cbProgressBar .divstatus > div > div .fa{
+    margin-left: 4px;
+    padding: 4px;
+    border-radius: 0px 4px 4px 0px;
+}
+#cbProgressBar li.activeout .number .numbercolor {
+    background: rgb(150, 201, 101);
+}
+#cbProgressBar li.cinza .number .numbercolor {
+    background: #E6E6E6;
+}
+#cbProgressBar li.cancelado .number .numbercolor {
+    background: #d00038;
+}
+#cbProgressBar .concluidoi{
+    background: rgb(150, 201, 101);
+}
+#cbProgressBar .canceladoi{
+    background: #d00038;
+}
+#cbProgressBar .number {
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+}
+#cbProgressBar .number .numbercolor {
+    border-radius: 25px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+   /* box-shadow: 2px 3px 5px #919191;*/
+}
+#cbProgressBar .fa-cog {
+    color: #fff;
+    font-size: 1.1em;
+}
+#cbProgressBar .fa-minus-circle {
+    color: #adadadad;
+}
+#cbProgressBar .fa-check {
+    color: #fff;
+}
+#cbProgressBar .fa-times {
+    color: #adadadad;
+    font-size: 1.1em;
+}
+#cbProgressBar .fa-times {
+    color: #fff;
+}
+.progressbar li.activeout .number{
+    color: white;
+}
+.progressbar li.cancelado .number{
+    color: white;
+}
+.progressbar li.can .number{
+    color: #d00038;
+}
+.progressbar li.active .number{
+    color: white;
+}
+.progressbar li.activena .number {
+    color: black;
+}
+.progressbar-wrapper {
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    will-change: scroll-position;
+    height: auto;
+    border: 1px solid #E6E6E6;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2);
+}
+ul.progressbar {
+    position: relative;   
+    will-change: auto;
+}
+
+#cbSteps g {
+    display:flex;
+    height: 150px;
+    font-size:20px;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    animation-name:animate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    opacity: 1;
+}
+/*************************************************************************************************/
+@media only screen and (min-width: 768px) {
+    #cbProgressBar{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #cbProgressBar li{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #cbProgressBar .divstatus{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #cbProgressBar .number{
+        margin-bottom: 10px;
+    }
+    #cbProgressBar .progresso:before {
+        width: 100%;
+        will-change: auto;
+        top: 24px;
+        height: 2px;
+        content: '';
+        position: relative;
+        z-index: 0;
+    }
+    #cbProgressBar .divstatus > div {
+        justify-content: center;
+    }
+    #cbProgressBar .divstatus > div {
+        width: 100%;
+        display: flex;
+    }
+
+    #cbProgressBar li.sem-cor.cor-verde:first-child:before {
+        background: linear-gradient(90deg, transparent 50%, rgb(150, 201, 101) 50%);
+    }
+    #cbProgressBar li.sem-cor.cor-verde:last-child:before {
+        background: linear-gradient(90deg, rgb(150, 201, 101) 50%, transparent 50%);
+    }
+    #cbProgressBar li.sem-cor.cor-cinza:first-child:before {
+        background: linear-gradient(90deg, transparent 50%, #e6e6e6 50%);
+    }
+    #cbProgressBar li.sem-cor.cor-cinza:last-child:before {
+        background: linear-gradient(90deg, #e6e6e6 50%, transparent 50%);
+    }
+    #cbProgressBar li.sem-cor.cor-vermelho:first-child:before {
+        background: linear-gradient(90deg, transparent 50%, #d00038 50%);
+    }
+    #cbProgressBar li.sem-cor.cor-vermelho:last-child:before {
+        background: linear-gradient(90deg, #d00038 50%, transparent 50%);
+    }
+
+    #cbProgressBar li.cor-verde:before,#cbProgressBar li.cor-verde-cinza:before {
+        background: rgb(150, 201, 101);
+    }
+    #cbProgressBar li.cor-cinza:before {
+        background: #e6e6e6;
+    }
+    #cbProgressBar li.cor-vermelho:before {
+        background: #d00038;
+    }
+
+    #cbProgressBar li.activeout.cor-vermelho:before {
+        background: linear-gradient(90deg, rgb(150, 201, 101) 50%, #d00038 50%);
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    #cbProgressBar{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #cbProgressBar .divstatus{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #cbProgressBar li{
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        padding: 25px 0px;
+    }
+
+    #cbProgressBar .number{
+        margin-right: 10px;
+    }
+
+    #cbProgressBar .progresso:before {
+        width: 3px;
+        will-change: auto;
+        top: 0;
+        height: 100%;
+        content: '';
+        position: absolute;
+        z-index: 0;
+        left: 21px;
+    }
+
+    #cbProgressBar li.sem-cor.cor-verde:first-child:before {
+        background: linear-gradient(180deg, transparent 50%, rgb(150, 201, 101) 50%);
+    }
+    #cbProgressBar li.sem-cor.cor-verde:last-child:before {
+        background: linear-gradient(180deg, rgb(150, 201, 101) 50%, transparent 50%);
+    }
+    #cbProgressBar li.sem-cor.cor-cinza:first-child:before {
+        background: linear-gradient(180deg, transparent 50%, #e6e6e6 50%);
+    }
+    #cbProgressBar li.sem-cor.cor-cinza:last-child:before {
+        background: linear-gradient(180deg, #e6e6e6 50%, transparent 50%);
+    }
+    #cbProgressBar li.sem-cor.cor-vermelho:first-child:before {
+        background: linear-gradient(180deg, transparent 50%, #d00038 50%);
+    }
+    #cbProgressBar li.sem-cor.cor-vermelho:last-child:before {
+        background: linear-gradient(180deg, #d00038 50%, transparent 50%);
+    }
+
+    #cbProgressBar li.cor-verde:before,#cbProgressBar li.cor-verde-cinza:before {
+        background: rgb(150, 201, 101);
+    }
+    #cbProgressBar li.cor-cinza:before {
+        background: #e6e6e6;
+    }
+    #cbProgressBar li.cor-vermelho:before {
+        background: #d00038;
+    }
+
+    #cbProgressBar li.activeout.cor-vermelho:before {
+        background: linear-gradient(180deg, rgb(150, 201, 101) 50%, #d00038 50%);
+    }
+}
+@keyframes animate {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

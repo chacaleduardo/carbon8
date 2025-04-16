@@ -1,0 +1,1 @@
+[{"FOLHA":"Folha"},{"FOLHA FERIAS":"Folha Férias"},{"DECIMO TERCEIRO":"Décimo Terceiro (Parc. 1)"},{"DECIMO TERCEIRO ":"Décimo Terceiro  (Parc. 2)"}]

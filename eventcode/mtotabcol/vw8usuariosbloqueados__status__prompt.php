@@ -1,0 +1,1 @@
+[{"Bloqueado":"Bloqueado"},{"Alerta":"Alerta"},{"Liberado":"Liberado"}]

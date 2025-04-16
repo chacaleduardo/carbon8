@@ -1,0 +1,18 @@
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+[class^="col-"] {
+    float: none !important;
+}
+
+#cbenef-items {
+    max-height: 317px;
+    overflow-y: auto;
+}
+
+#cbenef-table{
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+}

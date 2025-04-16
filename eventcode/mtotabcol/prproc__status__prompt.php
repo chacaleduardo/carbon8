@@ -1,0 +1,1 @@
+[{"APROVADO":"Aprovado"},{"INATIVO":"Inativo"},{"REVISAO":"Revisão"}]

@@ -1,0 +1,332 @@
+.dropz{
+	border: 2px dashed silver;
+	background-color: white;
+	display: inline-block;
+	padding: 10px;
+	color: silver;
+	cursor: pointer;
+}
+.dropz:hover {
+	border-color: #4cae4c;
+	color: #5cb85c;
+}
+.dropz > i {
+	pointer-events: none;
+	display: block;
+	text-align: center;
+}
+#tableestoque1 td {
+	background-color: #DCDCDC;
+	text-align: center;
+	font-weight: bold;
+
+}
+
+.tabelaoptions {
+	width: 100%;
+	text-align: center;
+}
+
+.point {
+	cursor: pointer;
+}
+
+.diveditor {
+	border: 1px solid #ccc;
+	background-color: white;
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	width: 695px;
+	height: 98%;
+	word-wrap: break-word;
+	overflow: auto;
+	padding: 5px;
+}
+
+.diveditor2,
+.diveditor3 {
+	border: 1px solid #ccc;
+	background-color: white;
+	color: black;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	width: 695px;
+	height: 98%;
+	word-wrap: break-word;
+	overflow: auto;
+	padding: 5px;
+}
+
+.opcoes {
+	background: #eee;
+	padding: 4px;
+	border: 1px solid #ccc;
+	margin-top: 2px;
+	border-radius: 4px;
+	float: left;
+	margin-right: 4px;
+}
+
+.panel-body label {
+	font-size: 13px;
+	font-weight: normal !important;
+	color: gray !important;
+}
+
+.opcoes i {
+	margin-left: 12px;
+}
+
+.azulg {
+
+	background-color: #00ffff;
+
+	color: #00ffff;
+
+}
+
+.vermelhog {
+
+	background-color: #c9302c;
+
+	color: #c9302c;
+
+}
+
+.verdeg {
+
+	background-color: #4cae4c;
+
+	color: #4cae4c;
+
+}
+
+.amarelog {
+
+	background-color: #FFAD00;
+
+	color: #FFAD00;
+
+}
+
+.desunidadeest {
+	-webkit-appearance: none;
+	background-color: #fcf8e3;
+	border: none;
+}
+
+
+i.tip:hover {
+	cursor: hand;
+	position: relative
+}
+
+i.tip span {
+	display: none
+}
+
+i.tip:hover span {
+	border: #c0c0c0 1px dotted;
+	padding: 5px 20px 5px 5px;
+	display: block;
+	z-index: 100;
+	background: #f0f0f0 no-repeat 100% 5%;
+	left: 0px;
+	margin: 10px;
+	width: 220px;
+	position: absolute;
+	top: 10px;
+	text-decoration: none
+}
+
+td.tip:hover {
+	cursor: hand;
+	position: relative
+}
+
+td.tip span {
+	display: none
+}
+
+td.tip:hover span {
+	border: #c0c0c0 1px dotted;
+	padding: 5px 5px 5px 5px;
+	display: block;
+	z-index: 100;
+	background: #f0f0f0 no-repeat 100% 5%;
+	left: 0px;
+	margin: 5px;
+	width: 150px;
+	position: absolute;
+	top: 20px;
+	text-decoration: none
+}
+
+.alinhamentoEsquerda
+{
+	padding-left: 0px;
+	padding-right: 10px;
+}
+
+.desabilitado {
+	background-color: #ece5e5 !important;
+}
+
+.errspan {
+	float: right;
+	margin-right: 34px;
+	margin-top: -20px;
+	position: relative;
+	z-index: 2;
+	color: #555;
+}
+
+.errspan2 {
+	float: right;
+	margin-right: 18px;
+	margin-top: -20px;
+	position: relative;
+	z-index: 2;
+	color: #555;
+}
+
+.paddingRightZero
+{
+	padding-right: 0px;
+}
+
+.marginTop
+{
+	margin-top: -55px !important;
+	padding-bottom: 20px;
+}
+
+.alinharBotao
+{
+	padding-left: 14px;
+}
+
+.alinhamentoUnidadeNegocio
+{
+	display: inline;
+	padding-right: 15px;
+}
+
+.escolhaUnidadeNegocio
+{
+	font-size: 10px;  
+	font-weight: bold;  
+	color: gray;
+	padding-left: 200px;
+	padding-right: 15px;
+}
+
+.addCampo
+{
+	top: 18px; 
+	float: left; 
+	height: 30px; 
+	width: 30px;
+}
+
+.especieFinalidade
+{
+	font-size: 11px; 
+	text-transform: uppercase; 
+	white-space: normal; 
+	min-height: 40px; 
+	height: auto; 
+	background-color: #eee;
+}
+
+.row{margin: 0 !important;}
+.alinharBotao{    
+	margin: 2rem 0;
+    display: inline-block;
+}
+
+#cbModalCorpo .select-col .dropdown-menu.inner {
+	max-height: 200px !important;
+ }
+
+#cbModal .modal-dialog:has(.select-col) {
+	width: 80%;
+}
+
+.select-col .dropdown-menu.open .text {
+    max-width: 60ch;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media(max-width: 1024px) {
+	.select-col .dropdown-menu.open .text {
+		max-width: 35ch;
+	}
+}
+
+.grupos-resultado {
+	padding: 1rem;
+}
+
+.configuracao-grupo-resultado .icon-plus,.configuracao-grupo-resultado  .icon-info {
+	border-radius: 50%;
+	background-color: #B9B9B9;
+	color: #ffff;
+	width: 25px;
+	height: 25px;
+	font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog:has( .testes) {
+        width: 1100px;
+        margin: 30px auto;
+    }
+}
+
+.btn-remover-grupo {
+	position: absolute;
+	top: .5rem;
+	right: 1rem;
+	z-index: 999;
+}
+
+button:has( ~ .has-error), .has-error {
+	border: 2px solid red !important;
+}
+
+label.radio-inline input{
+	margin: 2px 0 0;
+	font-size: 11px;
+}
+
+tr.disabled *{
+	color: gray;
+    cursor: not-allowed;
+}
+
+.panel-body{
+	padding-top: 10px !important;
+	padding: 5px 10px;
+}
+
+.btn-lg{
+	padding: 5px 8px;
+}
+
+.col-md-3{
+	padding: 1px 10px;
+}
+
+tr:has( .fa-check-square-o) td, .fa-check-square-o ~ *, input[type="radio"]:checked ~ *{
+	font-weight: bold;
+}
+
+label.autogenalabel{
+	font-weight: bold !important;
+}

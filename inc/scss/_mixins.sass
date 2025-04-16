@@ -1,0 +1,50 @@
+@mixin positionAbsoluteDefault
+    position: absolute
+    top: 0
+    left: 0
+
+@mixin flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+
+@mixin sm
+    @media(min-width: 640px)
+        @content
+
+@mixin md
+    @media(min-width: 768px)
+        @content
+
+@mixin lg
+    @media(min-width: 1024px)
+        @content
+
+@mixin xl
+    @media(min-width: 1280px)
+        @content
+
+@mixin \2xl
+    @media(min-width: 1536px)
+        @content
+
+@mixin max-sm
+    @media(max-width: 640px)
+        @content
+
+@mixin max-md
+    @media(max-width: 768px)
+        @content
+
+@mixin max-lg
+    @media(max-width: 1024px)
+        @content
+
+@mixin max-xl
+    @media(max-width: 1280px)
+        @content
+
+@mixin max-\2xl
+    @media(max-width: 1536px)
+        @content

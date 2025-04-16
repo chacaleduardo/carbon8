@@ -1,0 +1,1 @@
+[{"BOLETO":"Boleto"},{"C.CREDITO":"Cartão de Crédito"},{"C.DEBITO":"Cartão de Débito"},{"PIX":"PIX"},{"CHEQUE":"Cheque"},{"DEPOSITO":"Depósito"},{"TRANSFERENCIA":"Transferência"}]

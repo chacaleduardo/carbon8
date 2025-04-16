@@ -1,0 +1,126 @@
+a:focus, a:hover{text-decoration:none !important;}
+.sessoesusr {
+    margin: 4px;
+    padding: 0px;
+}
+.sessoesusr table,
+.sessoesusr table tbody tr td{
+    border: none!important;
+}
+
+.sessoesusr table{
+    width:200px;
+}
+
+.navbar-inverse .navbar-collapse{
+    width: 100vw;
+    max-width:100%;
+}
+.navbar-nav{
+    display: flex;
+    white-space: unset;
+    justify-content: space-between;
+    max-width:100%;
+}
+.navbar-nav > li {
+    float: none;
+    padding: 0.5rem 0;
+}
+.navbar-inverse .navbar-nav>li>a, 
+.navbar-default .navbar-nav>li>a, 
+.navbar-nav > li > a{
+    padding-top:0px!important;
+    padding-bottom:0px!important;
+    height:100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 12px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 10px;
+}
+#cblogomenu img
+{
+    max-width: 100%;
+    width: 100%;
+}
+#cbNotificacoes{
+    margin-left: auto;
+}
+.navbar-nav > li[cbmodulo] {
+    flex-grow: .05;
+}
+
+.badge {
+    font-size: 10px;
+    padding:3px 5px;
+}
+
+.message-text img {
+    cursor: zoom-in;
+}
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+    /* add padding to account for vertical scrollbar */
+    padding-right: 20px;
+}
+.btn-outline-warning{
+    color: #dc3545;
+       border-color: #dc3545;
+    background: transparent !important;
+    border-radius: 4px !important;
+    margin-left:4px !important;
+}
+.btn-outline-warning:hover{
+    color: whitesmoke !important;
+       border-color: #dc3545;
+    background: #dc3545 !important;
+    border-radius: 4px !important;
+}
+.btn-outline-warning .fa{
+    line-height: inherit;
+}
+#dropdownMenuDateCol .fa{
+    line-height: inherit;
+}
+#cbDaterangeColText{
+    margin-left:4px;
+}
+#cbResultadosLimparOrderBy{
+    float: right;
+    text-decoration: none;
+    color:grey;
+    display: none;
+}
+#cbResultadosLimparOrderBy:hover{
+    color:red;
+    cursor: pointer;
+}
+#cbLimparFiltros{
+    display: none;
+}
+#cbNotificacoes{display: none !important;}
+.dropdown-toggle::after
+{
+    border-top-color: #666;
+}
+#cbMenuSuperior{background-color: rgb(92, 204, 204);border: 0;z-index: 9999;}
+
+.open-menu i::before, .close-menu i::before
+{
+    font-size: 1.8rem;
+}
+
+.white-space-nowrap
+{
+    white-space: nowrap;
+}
+
+[cbmodulo="notificacoes"]{list-style: none;}
+._ncBell_{right: .5rem;}

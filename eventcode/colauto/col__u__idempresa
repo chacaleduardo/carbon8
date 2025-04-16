@@ -1,0 +1,5 @@
+<?
+#MAF190320: O multi empresa compartilha tabelas em comum. A partir desse pressuposto nao se deve alterar IDEMPRESA automaticamente.
+#$VALOR_COLUNA_AUTOMATICA = isset($_GET["_idempresa"])?$_GET["_idempresa"]:$_SESSION["SESSAO"]["IDEMPRESA"];
+//@487013 - MULTI EMPRESA
+?>

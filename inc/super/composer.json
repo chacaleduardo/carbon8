@@ -1,0 +1,5 @@
+{
+    "require": {
+        "disc/php-zabbix-sender": "^1.3"
+    }
+}

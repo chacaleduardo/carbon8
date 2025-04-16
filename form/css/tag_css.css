@@ -1,0 +1,224 @@
+.select-picker .dropdown-menu
+{
+    max-width: 100%;
+}
+
+.labels{
+    text-align-last: end;
+    padding-right: 3px;
+}
+.inputs{
+    padding-top: 0;
+}
+
+.has-ativ
+{
+    position: absolute;
+    display: none;
+    top: -7.2rem;
+    left: 0;
+    font-size: 1.1rem;
+    max-width: 100%;	
+}
+
+.col-tipo:hover .has-ativ
+{
+    display: block;
+}
+
+.has-ativ > div
+{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    right: 0;
+    bottom: -.4rem;
+    transform: rotate(45deg);
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border: 2px solid #faebcc;
+    z-index: -1;
+}
+
+.dropdown-menu.open
+{
+    max-height: 270px !important;
+}
+
+.select-picker
+{
+    width: 100% !important;
+}
+
+.flex > *
+{
+    margin-right: 0;
+    align-self: center;
+}
+
+.btn-default
+{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.addon 
+{
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+.dropdown-menu[role="combobox"]
+{
+    overflow: visible !important;
+}
+
+.bootstrap-select.btn-group .dropdown-menu
+{
+    max-height: 350px !important;
+}
+
+.row
+{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.form-control:not(textarea)
+{
+    height: 34px !important;
+}
+
+#cbContainer
+{
+    display: block !important;
+}
+
+.flex label, .flex input
+{
+	width: 100% !important;
+}
+
+.form-control
+{
+    width: 100% !important;
+    font-size: 11px !important;
+}
+
+input[type=checkbox], input[type=radio]
+{
+    margin: 0 !important;
+}
+
+.panel-heading label.label-heading
+{
+	color: #fff !important;
+	font-size: 11px !important;
+}
+
+#idbox
+{
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.2rem;
+}
+
+@media (min-width: 768px)
+{
+    .py-md-2
+    {
+        padding-top: .5rem !important;
+        padding-bottom: .5rem !important;
+    }
+}
+
+.letras a
+{
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-right: 0.3rem;
+}
+
+.letras [disabled]
+{
+    color: #bbb;
+    background-color: rgba(204, 204, 204, 0.562);
+    pointer-events: none;
+}
+.caixas > div{height: 55px;border: 2px solid #fff;}
+.caixas i{font-size: 1.6rem;color: #ffda86;}
+.tem-lote{background-color: #DD1C1A;color: #fff;}
+.lote-quantidade
+{
+    position: absolute;
+    top: -0.8rem;
+    left: -1rem;
+    background-color: #dd1c1a;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid;
+}
+#voltar-topo 
+{
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    z-index: 999;
+    background-color: #ccc;
+    padding: 1.2rem 1.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.caixas > div:has(.lote-quantidade)
+{
+    background-color: #dd1c1a !important;
+    color: #fff;
+    cursor: pointer;
+}
+
+#showimpressao{margin: 1rem 0;}
+.my-3{margin-top: 1rem; margin-bottom: 1rem;}
+.checkbox-lote + label
+{
+    background-color: #fff;
+    position: absolute;
+    text-align: center;    
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 3px RGB(142, 153, 171) inset
+}
+
+.checkbox-lote:hover + label
+{
+    background-color: rgba(51, 122, 183, .6);
+    color: #fff !important;
+}
+
+.checkbox-lote:checked + label
+{
+    background-color: rgb(51 122 183);
+    color: #fff !important;
+}
+
+#lista-total-lote:not(:has( #impressao-por-lote > div)) {
+    display: none !important;
+}
+
+.linha .items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #e0bd0863;
+    color: #762f24;
+}
+

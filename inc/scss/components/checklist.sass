@@ -1,0 +1,145 @@
+@use '../variaveis'
+@use '../mixins'
+
+.checklist
+    width: 100%
+
+    &.active .habilitar-campo, &:not(.active) .checklist-controls, &:not(.active) .checklist-input textarea
+        display: none !important
+
+    > span
+        // font-size: 1.4rem
+        font-weight: variaveis.$font-bold
+
+    &-progress
+        width: 100%
+        height: 30px
+        @include mixins.flex-center
+
+        span
+            width: 5%
+            font-weight: variaveis.$font-light
+
+        &-bar
+            width: 90%
+            margin-left: auto
+            height: 6px
+            background-color: RGBA(#{variaveis.$gray-60}, .5)
+            border-radius: 2rem
+            background-image: linear-gradient(to right, RGB(#{variaveis.$primary-color}), RGB(#{variaveis.$primary-color}))
+            background-size: 0%
+            background-repeat: no-repeat
+            transition: .4s ease 0s
+
+            @include mixins.md
+                width: 95%
+                margin-left: 0
+
+            &.finished
+                background-image: linear-gradient(to right, RGB(#{variaveis.$success-color}), RGB(#{variaveis.$success-color}))
+
+    &-input
+        margin-bottom: 1rem
+
+        textarea
+            border-radius: .5rem !important
+            min-height: 35px !important
+            padding: 0.5rem 0.7rem
+            resize: vertical
+
+    &-group
+        width: 100%
+
+    &-item
+        input[type='checkbox']
+            position: relative
+            visibility: hidden
+
+            &+label
+                @include mixins.flex-center
+                position: absolute
+                width: 15px
+                height: 15px
+                background-color: #fff
+                box-shadow: 0 0 3px RGB(#{variaveis.$gray-60}) inset
+                cursor: pointer
+                transition: .2s ease 0s
+
+            &:checked + label
+                background-color: RGB(#{variaveis.$success-color})
+
+        @include mixins.flex-center
+        position: relative
+        justify-content: flex-start
+        min-height: 35px
+        padding: .5rem 0
+        cursor: pointer
+
+        textarea
+            resize: vertical
+
+        > div:first-child
+            @include mixins.flex-center
+            justify-content: flex-start
+            width: 5%
+
+        > div:first-child:has(input:checked) + .checklist-item-text span
+            opacity: .7
+            text-decoration: line-through
+
+        &:not(.editing) .checklist-item-edit, &.editing .checklist-item-text
+            display: none !important
+
+        &.editing
+            align-items: flex-start
+            height: auto
+            padding: 1.5rem 0
+
+        .checklist-item-edit
+            width: 90%
+
+            textarea
+                min-height: 50px !important
+
+        &:hover
+            background-color: RGBA(#{variaveis.$gray-40}, .3)
+
+            .checklist-remove
+                opacity: 1
+
+        &-text
+            position: relative
+            width: 90%
+            transition: .3s ease 0s
+            align-items: center
+            margin-left: auto
+
+            span
+                white-space: break-spaces
+
+            @include mixins.md
+                margin-left: 0
+
+        input[type='checkbox']
+            width: 20px
+            cursor: pointer
+            margin: 0 !important
+
+    &-remove
+        position: absolute
+        width: 20px
+        height: 20px
+        right: 1rem
+        border-radius: 50%
+        transition: background-color .3s ease 0s
+        color: RGB(#{variaveis.$gray-80})
+        cursor: pointer
+        opacity: 0
+        @include mixins.flex-center
+
+        &:hover
+            background-color: RGBA(#{variaveis.$gray-50}, .5)
+            color: RGB(#{variaveis.$gray-90})
+
+
+        

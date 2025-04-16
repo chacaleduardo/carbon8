@@ -1,0 +1,77 @@
+.form-group { margin-bottom: 3px !important; }
+h1{ font-size: 13px !important; padding-left: 15px; padding-top: 10px; }
+hr { border-top: 3px solid #ddd; margin-left: 15px !important; }
+.pointer { padding: 5px 0px 0px 10px; }
+.wnoventa { width: 90% !important;}
+.wnoventaoito { width: 98% !important;}
+.tabs-container{
+    margin: 0 2px 0 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: #AAAAAA;
+    font-size: 16px;
+}
+.tabs-container>a{
+    color: #f8f9fc !important;
+}
+.nav-tabs>li.active>a{
+    background-color: whitesmoke !important;
+}
+.tabs-container.active>a{
+    color: #2f3237 !important;
+}
+.tabs-container:after {
+    content: '.';
+    display: block;
+    clear: both;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    visibility: none;
+}
+.panelAbas{
+    background-color: #FFF;
+    border: none; 
+}
+.tab-content{
+    background-color: whitesmoke;
+    border: 1px solid #ddd;
+}
+.nav-tabs {
+    border-bottom: none;
+}
+.nav-tabs>li>a:hover{
+    background-color: #AFAFAF;
+    color: #2f3237 !important;
+}
+
+.div-m {margin: 20px 30px 0px 35px;}
+.pd-top {padding-top: 40px;}
+.bckwh {background: white; padding-bottom: 30px;}
+.texto-central { text-align: center; font-size: 11px; margin-top: 15px;}
+.color-ft-dl { color: darkslategray !important; }
+
+.wd-65 { 
+    width: 65%; 
+}
+
+.pdt-10 {padding-top: 10px;}
+.pdl-10 {padding-left: 10px;}
+.dp-flex {
+    display: flex;
+    font-size: 11px;
+    color: darkslategray !important;
+    align-items: center;
+}
+
+.dib {display: inline-block;}
+
+.pdt-10-fs-12 {
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+label {margin-left: 10px; font-size: 12px !important;}
+.texto-resultado { margin-left: 1%; width: 67%; }
+.bg-purple {background: rebeccapurple; color: white;}
+.bg-wine {background: darkred; color: white;}

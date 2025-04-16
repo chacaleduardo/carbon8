@@ -1,0 +1,1 @@
+[{"C":"Credito"},{"D":"Debito"}]

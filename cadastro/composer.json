@@ -1,0 +1,15 @@
+{
+    "name": "biofy/carbon8",
+    "autoload": {
+        "psr-4": {
+            "Carbon8\\": "../inc/php/",
+            "Carbon8\\Cadastro\\": "../cadastro/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lucas Melo",
+            "email": "lucasmelo@biofy.tech"
+        }
+    ]
+}

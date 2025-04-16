@@ -1,0 +1,58 @@
+@use 'variaveis'
+@use 'mixins'
+
+@each $chave, $valor in variaveis.$espacamento
+    // Padding
+    .p-#{$chave}, .pl-#{$chave}, .px-#{$chave}
+        padding-left: #{$valor}
+
+    .p-md-#{$chave}, .pl-md-#{$chave}, .px-md-#{$chave}
+        @include mixins.md
+            padding-left: #{$valor}
+
+    .p-#{$chave}, .pt-#{$chave}, .py-#{$chave}
+        padding-top: #{$valor}
+
+    .p-md-#{$chave}, .pt-md-#{$chave}, .py-md-#{$chave}
+        @include mixins.md
+            padding-top: #{$valor}
+
+    .p-#{$chave}, .pr-#{$chave}, .px-#{$chave}
+        padding-right: #{$valor}
+
+    .p-md-#{$chave}, .pr-md-#{$chave}, .px-md-#{$chave}
+        @include mixins.md
+            padding-right: #{$valor}
+
+    .p-#{$chave}, .pb-#{$chave}, .py-#{$chave}
+        padding-bottom: #{$valor}
+
+    .p-md-#{$chave}, .pb-md-#{$chave}, .py-md-#{$chave}
+        @include mixins.md
+            padding-bottom: #{$valor}
+
+    // Margin
+    .m-#{$chave}, .ml-#{$chave}, .mx-#{$chave}
+        margin-left: #{$valor}
+
+    .m-#{$chave}, .mt-#{$chave}, .my-#{$chave}
+        margin-top: #{$valor}
+
+    .m-#{$chave}, .mr-#{$chave}, .mx-#{$chave}
+        margin-right: #{$valor}
+
+    .m-#{$chave}, .mb-#{$chave}, .my-#{$chave}
+        margin-bottom: #{$valor}
+
+    // Left / Top / Right / Bottom
+    .left-#{$chave}
+        left: #{$valor}
+
+    .top-#{$chave}
+        top: #{$valor}
+
+    .right-#{$chave}
+        right: #{$valor}
+
+    .bottom-#{$chave}
+        bottom: #{$valor}

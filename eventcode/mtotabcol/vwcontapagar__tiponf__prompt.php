@@ -1,0 +1,1 @@
+[{"Compra":"Danfe"},{"Servico":"Serviço"},{"Cte":"CTe"},{"Consessionaria":"Concessionária"},{"Guia/Cupom":"Guia/Cupom"},{"Recibo":"Recibo"},{"Outros":"Outros"},{"PJ":"Rh"},{"Socios":"Sócios"},{"F":"Captação"}]

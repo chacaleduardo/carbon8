@@ -1,0 +1,30 @@
+30-04-2019_17:14:08
+Updating 0ea67c6..b4f78ed
+Fast-forward
+ ajax/evento.php | 4 ++--
+ form/alerta.php | 4 ++--
+ form/evento.php | 4 ++--
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+---------Rsync:
+ajax/
+ajax/evento.php
+form/
+form/alerta.php
+form/evento.php
+
+Number of files: 8,591 (reg: 7,828, dir: 763)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 3
+Total file size: 238.61M bytes
+Total transferred file size: 189.32K bytes
+Literal data: 189.32K bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 565.03K
+Total bytes received: 903
+
+sent 565.03K bytes  received 903 bytes  377.29K bytes/sec
+total size is 238.61M  speedup is 421.62

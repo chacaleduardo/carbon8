@@ -1,0 +1,262 @@
+*{
+	font-family: Verdana, Geneva, sans-serif !important;
+}
+.tsep{/*tabela interna ao div separador de blocos de informacao*/
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	border-collapse: collapse;
+	width: 100%;
+}
+	.tsep .td{
+		border: none;
+		vertical-align: top;
+	}
+	.tsep .tdlogo{
+		vertical-align: top;
+		width:130px;
+	}
+	.tsep .tdrot{/*td de rotulo*/
+		font-size: 8pt;
+		color: rgb(102,102,102);
+		padding-left: 5px;
+		margin: 0px;
+		vertical-align: bottom;
+	}
+        .tsep .tdinf{/*td de rotulo*/
+                border:1px solid rgb(225,225,225);
+		font-size: 8pt;
+		color: rgb(102,102,102);
+		padding-left: 5px;
+		margin: 0px;
+		vertical-align: bottom;
+	}
+	.tsep .tdval{/*td de valor*/
+		font-size: 9pt;
+		padding-left: 5px;
+		margin: 0px;
+		vertical-align: bottom;
+	}
+
+.nimptop{/*numero da impressao superior*/
+	border-bottom: 1px solid gray;
+	border-bottom-style: dotted;
+	font-size: 7pt;
+	color: rgb(90, 90, 90);
+	text-align: right;
+	float: right;
+	white-space: nowrap;
+}
+
+.nimptbot{/*numero da impressao inferior */
+	border-top: 1px solid gray;
+	border-top-style: dotted;
+	font-size: 7pt;
+	color: rgb(90, 90, 90);
+	text-align: right;
+	float: right;
+	white-space: nowrap;
+}
+.tbgr{/*tabela de agrupamento de informacoes*/
+	border: 1px solid rgb(225,225,225);
+	border-collapse: collapse;
+	width: 100%;
+	padding-right: 20px;
+}
+	.tbgr .grcab{/*cabecalho*/
+		background-color: rgb(225,225,225);
+		font-size: 8pt;
+		color: rgb(76,76,76);
+		padding-left: 4px;
+		font-weight:bold;
+	}
+	.tbgr .grcabteste{/*cabecalho*/
+		background-color: rgb(225,225,225);
+		font-size: 9pt;
+		padding-left: 4px;
+		font-weight:bold;
+	}
+	.tbgr .grrot{
+		border:1px solid rgb(225,225,225);
+		font-size: 8pt;
+		color: rgb(102,102,102);
+		text-align: right;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.tbgr .grvalb{/*valor negrito*/
+		border:1px solid rgb(225,225,225);
+		font-size: 9pt;
+		font-weight: bold;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.tbgr .grval{/*valor SEM negrito*/
+		border:1px solid rgb(225,225,225);
+		font-size: 9pt;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.tbgr .lbrot{/*outras informacoe da amostra*/
+		font-size: 8pt;
+		color: rgb(102,102,102);
+		text-align: right;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.tbgr .lbval{/*outras informacoe da amostra*/
+		font-size: 9pt;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+
+.dsepteste{/*tabela interna ao div separador de blocos de informacao*/
+	background-color: rgb(225,225,225);
+}
+
+.ft8cinza{
+	font-size: 8pt;
+	color:  rgb(102,102,102);
+	font-weight: normal;
+}
+
+.tabelisa {
+	border-collapse:collapse;
+	color:black;
+	font-size:8pt;
+}
+.tabelisa .trnormal td{
+	border:1px solid rgb(225,225,225);
+	color:black;
+	font-size:8pt;
+	padding-left:5px;
+	padding-right:5px;
+}
+.tabelisa .trnormal .gray{
+	border:1px solid rgb(225,225,225);
+	color: silver;
+	font-size:8pt;
+}
+.tabelisa .hdr td {
+	background-color:rgb(225,225,225);
+	border:1px solid rgb(225,225,225);
+	color:black;
+	font-size:8pt;
+
+}
+.tabelisa .trpos td{
+	border: 1px solid rgb(225,225,225);
+	bgcolor: #FFC0C0;
+	background-color: #FFC0C0;
+	font-family: Arial, FreeSans, Sans,  Serif, SansSerif;
+	font-size: 8pt;
+	color: black;
+}
+.resdesc {
+	color:black;
+	font-size:7pt;
+	width:100%;
+	word-wrap:break-word;
+}
+.resdesc table{
+	border: 1px solid silver;
+	border-collapse:collapse;
+}
+.resdesc table th{
+	border: 1px solid silver;
+	font-size:12px;
+}
+.resdesc table td{
+	border: 1px solid silver;
+	font-size:12px;
+}
+
+.tabass{
+	border:0px;
+	font-size:11;
+	padding:0px; 
+	margin:0px;
+	display:inline;
+}
+.tabass td{
+	padding:0px;
+	margin:0px;
+	padding-right:8px;
+}
+
+.tabass .lb6{/* label inferior à imagem da assinatura */
+	padding:0px;
+	margin:0px;
+	font-size:6pt;
+}
+
+.tabass .lbresp{/* label inferior à imagem da assinatura */
+	padding:0px;
+	margin:0px;
+	font-size:9px;
+}
+
+
+.tborif{
+	border-collapse:collapse;
+	border-color:black -moz-use-text-color;
+	border-style:solid none;
+	border-width:0 medium;
+	margin-bottom:15px;
+	width:100%;
+}
+
+.tb .rot {
+	color:black;
+	font-size:9pt;
+	padding-right:5px;
+	text-align:right;
+}
+
+.tb .rotx {
+	color:black;
+	font-size:9pt;
+	padding-right:35px;
+	text-align:left;
+}
+
+.tb .rotvalres {
+	color:black;
+	font-size:8pt;
+	padding-left:15px;
+	text-align:left;
+}
+
+.tb .valres {
+	color:black;
+	font-size:10pt;
+	padding-right:5px;
+	text-align:left;
+}
+.fset{
+	border:1px solid silver;
+}
+.ftitulo{
+	font-size: 8pt;
+	color: rgb(76,76,76);
+	padding-left: 4px;
+	font-weight:bold;
+}
+.divfrase{
+	font-size:9pt;
+}
+.tabtitulos tr td{
+	font-size: 9pt;
+}
+.cabtxt{
+	border:none;
+	padding:0px;
+	margin:0px;
+	font-size:9px;
+	color:gray;
+	width: 100%;
+}
+.tablegenda tr td{
+	font-size: 7pt;
+	color: gray;
+}

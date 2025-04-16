@@ -1,0 +1,6 @@
+blocog_htm_files
+blocog.htm
+blocog_htm_files/1.png
+blocog_htm_files/1@2x.png
+blocog_htm_files/3.png
+blocog_htm_files/3@2x.png

@@ -1,0 +1,239 @@
+#qr-scanner{
+    background: #4c4c4c;
+    border-radius: 4px;
+    box-shadow: 2px 2px 3px #898989;
+}
+
+#qr-scanner-video.qr-inativo{
+    height: 0;
+}
+
+#qr-scanner-video, #qr-scanner-video-content{
+    width: 100%;
+}
+
+#qr-scanner-video-content{
+    height: 45vh;
+    border-radius: 4px 4px 0px 0px;
+}
+
+#qr-scanner-video{
+    height: 45vh;
+}
+
+#qr-scanner-flash-toggle{
+    border-radius: 4px;
+    display: none;
+    box-shadow: 2px 2px 3px #898989;
+}
+
+#qr-scanner-flash-toggle.qr-inativo{
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+
+#qr-scanner-flash-toggle.qr-ativo{
+    background-color: #fffa7c;
+    border: 1px solid #9b9849;
+}
+
+#qr-scanner-button button{
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 5px 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px #898989;
+}
+
+#qr-scanner-button button.qr-ativo{
+    background-color: #f3f3f3;
+    border: 2px solid #7e7e7e;
+    color: #525252;
+}
+
+#qr-scanner-button button.qr-inativo{
+    background-color: #7e7e7e;
+    border: 2px solid #444444;
+    color: white;
+    text-shadow: 2px 2px #444444;
+}
+
+#qr-scanner-actions{
+    padding: 5px 10px !important;
+}
+
+#qr-scanner-actions div{
+    margin: 10px 0px;
+}
+
+#qr-scanner-cameras{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #dddddd;
+    border-radius: 4px;
+    box-shadow: 2px 2px 3px #6a6a6a;
+}
+
+#qr-scanner-cameras span{
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+#qr-scanner-cameras button{
+    padding: 5px 20px;
+    margin-left: 20px;
+}
+
+#qr-scanner-no-video, #qr-scanner-no-camera{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 44vh;
+    justify-content: space-evenly;
+    color: #4a4a4a;
+}
+
+#qr-scanner-no-video i, #qr-scanner-no-camera i{
+    font-size: 15vh;
+}
+
+#qr-scanner-no-video span, #qr-scanner-no-camera span{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#qr-scanner-video-content.qr-scanner-layout {
+    position: relative;
+    overflow: hidden;
+}
+#qr-scanner-video-content.qr-scanner-layout .scan-region-highlight {
+    border-radius: 8px;
+    outline: rgba(0, 0, 0, .6) solid 50vmax;
+}
+#qr-scanner-video-content.qr-scanner-layout .scan-region-highlight-svg {
+    display: none;
+}
+
+@media screen and (max-width: 991px){
+    hr{
+        margin-top: 30px;
+        margin-bottom: 0px;
+        border: 0;
+        border-top: 1px solid #dbdbdb;
+    }
+}
+
+@media screen and (min-width: 992px){
+    hr{
+        border: 0;
+        margin: 0;
+    }
+}
+
+#main-content{
+    margin: 10px 0px;
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 3px #a7a7a7;
+}
+
+.volumes-ok .volume{
+    background-color: #9eeecb;
+}
+
+.volumes-ok .volume-count{
+    background-color: #1e6e4b;
+}
+
+.volumes-ok .volume-remove{
+    color: #1e6e4b;
+}
+
+.volumes-pendentes .volume{
+    background-color: #fc8fb3;
+}
+
+.volumes-pendentes .volume-count{
+    background-color: #7c0f33;
+}
+
+.volumes-pendentes .volume-remove{
+    color: #7c0f33;
+}
+
+.volumes-erro .volume{
+    background-color: #ffde9c !important;
+}
+
+.volumes-erro .volume-count{
+    background-color: #e7b73c !important;
+}
+
+.volumes-erro .volume-remove{
+    color: #e7b73c !important;
+}
+
+.scanneado .volume{
+    padding: 10px 5px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px #939393;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+
+.scanneado .volume-count{
+    padding: 3px 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px #424242;
+    color: white;
+    font-weight: bold;
+}
+
+.scanneado .volume-idnf{
+    padding: 0px 5px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.scanneado .volume-remove{
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.nao-scanneado .volume{
+    box-shadow: none;
+    border: 1px dashed #7a7a7a;
+    border-radius: 8px;
+    padding: 8px 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+
+.nao-scanneado .volume-count{
+    color: #7a7a7a;
+    box-shadow: none;
+    border: 1px dashed #7a7a7a;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.nao-scanneado .volume-idnf{
+    padding: 0px 5px;
+    font-weight: bold;
+    font-size: 17px;
+    color: #7a7a7a;
+}
+
+.nao-scanneado .volume-remove{
+    padding: 5px 10px;
+    color: #7a7a7a;
+}

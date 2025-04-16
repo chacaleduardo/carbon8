@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'laudo';
+  src:  url('laudo.eot?a168hv');
+  src:  url('laudo.eot?a168hv#iefix') format('embedded-opentype'),
+    url('laudo.ttf?a168hv') format('truetype'),
+    url('laudo.woff?a168hv') format('woff'),
+    url('laudo.svg?a168hv#laudo') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+	font-family: Monserrat;
+	src: url(../Montserrat-Regular.ttf);
+}
+@font-face {
+	font-family: Monserrat-ligth;
+	src: url(../Montserrat-Light.ttf);
+}
+@font-face {
+	font-family: Monserrat-Medium;
+	src: url(../Montserrat-Medium.ttf);
+}
+@font-face {
+	font-family: Monserrat-ligthitalic;
+	src: url(../Montserrat-LightItalic.ttf);
+}
+
+.laudoicon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'laudo' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.docaut:before {
+  content: "\e90a";
+}
+
+.ovinosO:before {
+  content: "\e900";
+}
+.ovinos:before {
+  content: "\e901";
+}
+.equinosE:before {
+  content: "\e902";
+}
+.equinos:before {
+  content: "\e903";
+}
+.bovinosB:before {
+  content: "\e904";
+}
+.bovinos:before {
+  content: "\e905";
+}
+.avesA:before {
+  content: "\e906";
+}
+.aves:before {
+  content: "\e907";
+}
+.suinosS:before {
+  content: "\e908";
+}
+.suinos:before {
+  content: "\e909";
+}
+

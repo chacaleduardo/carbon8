@@ -1,0 +1,31 @@
+@use 'sass:map'
+@use '../variaveis'
+@use '../mixins'
+
+#cbMenuSuperior
+    position: fixed !important
+    width: 100%
+
+#cbMenuSuperior .navbar-nav
+    min-height: 45px
+
+    .open .dropdown-menu
+        position: absolute !important
+        float: none
+        width: auto
+        margin-top: 0
+        background-color: RGB(#{variaveis.$gray-10}) !important
+        border: 0
+        -webkit-box-shadow: none
+        box-shadow: none
+
+#cbMenuSuperior li.ativo, #cbMenuSuperior a:not(#cblogomenu):hover li,
+#cbMenuSuperior li
+    color: RGB(map.get(variaveis.$theme-color, 'primary'))
+
+#cbMenuSuperior li span
+    display: none
+
+@include mixins.xl
+    #cbMenuSuperior li span
+        display: block

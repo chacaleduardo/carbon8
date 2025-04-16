@@ -1,0 +1,148 @@
+.botao-menu-lateral{
+    width: 100%;
+    background: white;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    font-size: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.botao-menu-lateral.ativo{
+    background: #337ab7;
+    color: white;
+}
+
+.painel {
+    background: white;
+    margin: 20px 0px;
+    padding: 30px 0px 10px 0px;
+    border-radius: 4px;
+    border: 1px solid #e1e1e1;
+}
+
+.card_value{
+    font-size: 2rem;
+}
+
+.circularProgressIndicator{
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    border-radius: 100%;
+    border: 5px solid rgba(229, 229, 229, 1);
+    border-top-color: #709ABE;
+    animation: spin 1s infinite linear;
+    margin-top: 5px;
+}
+
+.card-space-height{
+    height: 110px;
+}
+
+.rel-icon {
+    font-size: 28px;
+    margin-right: 30px;
+    opacity: 0.5;
+    margin-bottom: 5px;
+}
+.rel-icon:hover{
+margin-right: 19px;
+padding: 6px 11px;
+}
+
+.hideshowtable {
+    display: none !important;
+}
+
+.btnRefresh{
+    position: absolute;
+    top: 5px;
+    right: 36px;
+    font-size: 24px;
+    color: #bbbbbb;
+}
+
+.btnRefresh1{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    color: #bbbbbb;
+}
+
+.btnCollapse{
+    position: absolute;
+    top: 5px;
+    right: 62px;
+    font-size: 24px;
+    color: #bbbbbb;
+}
+
+.btnRefresh:hover{
+    color: #747474;
+    animation: fa-spin 2s infinite linear;
+}
+.btnRefresh1:hover{
+    color: #747474;
+    animation: fa-spin 1.5s infinite linear;
+}
+
+.btnCollapse:hover{
+    color: #747474;
+}
+
+.card-body #card_title_sub
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 83%;
+    white-space: nowrap;
+}
+
+.card-space:hover .card-body #card_title_sub,
+.painel-cards .card:hover .card-body #card_title_sub
+{
+    max-width: none;
+    width: auto;
+    overflow: unset;
+}
+
+.card-space:hover .card + i{bottom: 30px !important;}
+.btnRefresh:has(~ .painel-cards .circularProgressIndicator:not(.hidden), ~ div .card:not(.hidden) .circularProgressIndicator:not(.hidden), ~ div.hidden){pointer-events: none !important;}
+.btnRefresh1:has(~ .painel-cards .circularProgressIndicator:not(.hidden), ~ div .card:not(.hidden) .circularProgressIndicator:not(.hidden), ~ div.hidden){pointer-events: none !important;}
+
+@media (max-width: 1024px) {
+    #cbModal .modal-header {
+        height: auto !important;
+    }
+
+    #cbModalTitulo {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #cbModalTitulo h4 {
+        text-align: left !important;
+        margin: 1.5rem 0;
+    }
+
+    #cbModalTitulo {
+        margin: 0;
+        padding: 0 1rem;
+    }
+
+    #cbModal .modal-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    
+    .modal-header button {
+        position: absolute;
+    }
+}
+#cbModalCorpo {
+    overflow-x: auto;
+}

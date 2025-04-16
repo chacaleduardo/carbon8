@@ -1,0 +1,1 @@
+[{"material":"Material"},{"insumo":"Insumo"},{"produtoacabado":"Produto Acabado"},{"imobilizado":"Imobilizado"},{"nenhum":"Sem Classificação"}]

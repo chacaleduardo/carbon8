@@ -1,0 +1,6 @@
+@import 'padrao.css';
+
+textarea
+{
+    min-height: 120px;
+}

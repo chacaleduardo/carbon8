@@ -1,0 +1,52 @@
+@use 'sass:map'
+
+@use 'variaveis'
+@use 'fonte'
+@use 'cores'
+@use 'espacamento'
+@use 'utilitarios'
+@use 'mixins'
+@use 'tipografia'
+
+@use 'components/sidebar'
+@use 'components/modal_snippet_acao'
+@use 'components/menu_superior'
+
+*
+    font-family: 'Roboto'
+
+.dropdown-icon
+    transform: rotate(-90deg)
+
+[aria-expanded="true"] .dropdown-icon
+    transform: rotate(0deg)
+    color: RGB(#{map.get(variaveis.$theme-color, 'primary')})
+
+#cbContainer
+    padding-top: 45px
+
+    &:not(.menu-lateral-hidden)
+        @include mixins.md
+            width: 93% !important
+
+        @include mixins.xl
+            width: 95% !important
+
+#cbModuloForm, #cbModuloHeader
+    @include mixins.md
+        width: 95% !important
+        margin: auto !important
+        display: block
+
+    @include mixins.xl
+        width: 99% !important
+        
+.mobile #sidebar, .mobile #cbMenuSuperior
+    @include mixins.max-lg
+        display: none
+
+.mobile #cbContainer
+    @include mixins.max-lg
+        width: 100% !important
+        padding-top: 0 !important
+        

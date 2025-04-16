@@ -1,0 +1,78 @@
+@import './padrao.css';
+
+.planilha input:not([type=search]):not([type=checkbox]):not([type=radio]),.planilha select{
+    border: 1px solid silver !important;
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.planilha tbody tr td,
+.planilha tbody tr th {
+    padding: 0px 8px;
+}
+.table{
+    margin: 0px;
+}
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    border-top: none;
+    min-height: 40px;
+    vertical-align: middle;
+}
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+ul.cbLegenda li i {
+    height: 0px;
+    width: 0px;
+    display: inline-block;
+    border: 1px solid #EBEBEB;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+ul.cbLegenda {
+    margin-top: -30px;
+}
+.cp_qtd>input[type="checkbox"]{
+    margin-left: 15px;
+}
+.cp_un .tag{
+    min-width: 71px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: initial;
+}
+.cabitem th:first-child{
+    padding: 0px 12px !important;
+}
+.tag{
+    margin: 4px 0;
+}
+#cbPanelBotaoFlutuanteAbrir, #cbPanelBotaoFlutuanteFechar{
+    height: 38px;
+    display: flex;
+    align-items: center;	
+}
+[id^="solmatitem"] {
+    border-top: 1px solid #d9d9d9;
+}
+[readonly] {
+    background: #eee !important;
+    touch-action: none !important;
+}
+.item:has(tr.fundoverde){background-color: #c5e0b4;}
+.soll:has(+ div tr.fundoverde) i{color: #000;}
+.fundoVerde{background-color: #c5e0b4 !important;}
+.fundoAmarelo{background-color: #f6c23e29 !important;}
+.mw-input{max-width: 70px;}

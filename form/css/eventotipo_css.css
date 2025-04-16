@@ -1,0 +1,176 @@
+.panel-status{
+    height: auto;
+    padding: 5px;
+}
+#novoStatus{
+        align-self: flex-end;
+}
+td.proxes{
+    white-space: nowrap;
+    position: relative;
+}
+td.proxes i {
+    font-size: 18px;
+    margin-right: 3px;
+    color: silver;
+    cursor: pointer;
+}
+
+td.proxes i.iproxstatus{
+        opacity: 0.5;
+        transition: all .5s;
+}
+td.proxes i.iproxstatus:hover{
+        opacity: 1;
+}
+td.proxes i.iproxstatus.selecionado{
+        opacity: 1;
+}
+input[id^=obrigatorio]:checked + label
+{
+    background-color: #337ab7;
+    color: #fff !important;
+}
+
+.input-block
+{
+    display: flex;
+}
+
+.input-block .input-check
+{
+    padding: .5rem 1rem;
+}
+
+.input-block .input-check, .required-input, .choose-input-type,
+.choose-input-type-btn
+{
+    border: 1px solid #ccc;
+}
+
+.input-block > input
+{
+    padding: none !important;
+    height: auto !important;
+    line-height: unset !important;
+}
+
+.input-block > div:not(#choose-input-type):not(.width-tooltip)
+{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+    padding: 0;
+}
+
+.input-block .input-check
+{
+    display: flex;
+    align-items: center;
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.input-block .input-check input
+{
+    margin: 0 !important;
+}
+
+.input-block input
+{
+    border-radius: 0 !important
+}
+
+.choose-input-type
+{
+    padding: .5rem
+}
+
+#choose-input-type
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: .5rem 1rem;
+    background-color: #eeeeee;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    z-index: 9;
+}
+
+.options
+{
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+
+#close-options
+{
+    position: absolute;
+    right: -.8rem;
+    top: -.8rem;
+    font-size: 2.4rem
+}
+
+.add-option
+{
+    font-size: 1.9rem
+}
+
+.btn-group.bootstrap-select.show-tick
+{
+    width: 41.66666667% !important;
+}
+
+.btn-group.bootstrap-select.show-tick > button
+{
+    width: 100% !important;
+}
+
+#cbContainer
+{
+    display: block !important;
+}
+
+.width-tooltip
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 0;
+    bottom: 130%;
+    background-color: rgb(var(--gray-10));
+    border: 1px solid rgb(var(--gray-40));
+}
+
+.width-tooltip .tooltip-arrow
+{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(var(--gray-10));
+    border: 1px solid rgb(var(--gray-40));
+    top: 92%;
+    z-index: 1;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.layout-content {
+    z-index: 2;
+}
+.layout-item > div {transition: .2s ease 0s;}
+
+.layout-item.active > div, .layout-item:hover > div
+{
+    background-color: rgb(var(--primary));
+    color: rgb(var(--gray-10)) !important;
+}
+
+.texto_configuracao{
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 3px;
+}
