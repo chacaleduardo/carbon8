@@ -1,0 +1,1 @@
+[{"1":"[1]-NF-e normal"},{"2":"[2]-NF-e complementar"},{"3":"[3]-NF-e de ajuste"},{"4","[4]-Devolução de mercadoria"}]

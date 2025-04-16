@@ -1,0 +1,5 @@
+{
+    "require": {
+        "palicao/php-redis-time-series": "^2.1"
+    }
+}

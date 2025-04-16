@@ -1,0 +1,1 @@
+[{"ATIVO":"ATIVO"},{"INATIVO":"INATIVO"}]

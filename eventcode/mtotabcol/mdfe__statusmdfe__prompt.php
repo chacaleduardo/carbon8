@@ -1,0 +1,1 @@
+﻿[{"PENDENTE":"Pendente"},{"AUTORIZADO":"Autorizado"},{"CONCLUIDO":"Concluido"}]

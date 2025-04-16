@@ -1,0 +1,125 @@
+@use '../variaveis'
+@use '../mixins'
+
+#sidebar a, #sidebar i
+    color: RGB(#{variaveis.$gray-80}) !important
+
+#sidebar .nav-item
+    padding: 0 1rem
+
+#sidebar .nav-link, #sidebar .nav-item
+    position: relative
+    font-size: 1.3rem !important
+
+
+#sidebar .dropdown-icon
+    position: absolute
+    right: .7rem
+
+
+#sidebar
+    position: fixed
+    width: 59px
+    height: 95vh
+    overflow: hidden auto
+    top: 45px
+    background-color: RGB(#{variaveis.$gray-20})
+    z-index: 9999
+
+    &:not(.carregado)
+        display: none
+
+    #btn-input-search-clear
+        position: absolute
+        right: 1rem
+
+    #input-search
+        border-color: RGB(#{variaveis.$gray-30})
+
+    .menu-icon
+        width: 15px
+
+
+
+#sidebar::-webkit-scrollbar 
+    width: 0px
+
+/* Track */
+#sidebar::-webkit-scrollbar-track 
+    background: RGB(#{variaveis.$gray-10}) 
+
+
+/* Handle */
+#sidebar::-webkit-scrollbar-thumb 
+    background: RGB(#{variaveis.$gray-70}) 
+
+
+/* Handle on hover */
+#sidebar::-webkit-scrollbar-thumb:hover 
+    background: RGB(#{variaveis.$gray-90}) 
+
+#sidebar:not(.opened) span, #sidebar:not(.opened) #btn-input-search-clear,
+#sidebar:not(.opened) input, #sidebar:not(.opened) .nav-item .dropdown-icon
+    opacity: 0 !important
+
+#sidebar.opened
+    width: 100%
+
+@media(min-width: 768px)
+    #sidebar.opened
+        width: 40%
+
+@media(min-width: 1024px)
+    #sidebar.opened
+        width: 30%
+
+@media(min-width: 1280px)
+    #sidebar.opened
+        width: 21%
+
+#sidebar span, #sidebar input, #btn-input-search-clear,
+#sidebar .nav-item .dropdown-icon, #sidebar #cblogomenu
+    transition: .3s ease 0s
+    opacity: 1    
+
+
+#sidebar .nav-link
+    padding: 1rem
+    position: relative
+    left: 0.2rem
+
+#sidebar li
+    padding: .5rem 0
+    padding-left: 40px
+
+#sidebar ul
+    list-style: none
+
+#sidebar a:hover
+    text-decoration: none
+
+#sidebar div.ativo, #sidebar div[cbmodulo]:has(.ativo),
+#sidebar div.nav-item:hover
+    background-color: RGB(#{variaveis.$gray-10})
+
+#sidebar li.ativo, #sidebar ul li:hover
+    background-color: RGBA(#{variaveis.$primary-color})
+
+#sidebar li.ativo, #sidebar a:hover li 
+    color: RGB(#{variaveis.$gray-10}) !important
+
+.overlay
+    @include mixins.positionAbsoluteDefault
+    width: 100%
+    min-height: 100vh
+    height: 100%
+    background-color: RGBA(#{variaveis.$gray-100}, .6)
+    z-index: -1
+    backdrop-filter: blur(1px)
+    opacity: 0
+    transition: opacity .3s ease 0s, z-index 0s ease .3s
+
+.overlay:has(~ #sidebar.opened)
+    transition: opacity .3s ease .1s, z-index 0s ease 0s
+    z-index: 999
+    opacity: 1

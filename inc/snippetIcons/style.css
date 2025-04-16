@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?3dyf95');
+  src:  url('fonts/icomoon.eot?3dyf95#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?3dyf95') format('truetype'),
+    url('fonts/icomoon.woff?3dyf95') format('woff'),
+    url('fonts/icomoon.svg?3dyf95#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-no-video:before {
+  content: "\e91b";
+}
+.icon-no-camera:before {
+  content: "\e91c";
+}
+.icon-carrinhodemao:before {
+  content: "\e91a";
+}
+.icon-emplilhadeira:before {
+  content: "\e919";
+}
+.icon-elemayer:before {
+  content: "\e916";
+}
+.icon-etapa:before {
+  content: "\e917";
+}
+.icon-notebook:before {
+  content: "\e918";
+}
+.icon-calendario:before {
+  content: "\e901";
+}
+.icon-comercial1:before {
+  content: "\e902";
+}
+.icon-dashboard:before {
+  content: "\e903";
+}
+.icon-documento:before {
+  content: "\e904";
+}
+.icon-entrada:before {
+  content: "\e905";
+}
+.icon-financeiro3:before {
+  content: "\e906";
+}
+.icon-pesquisa1:before {
+  content: "\e907";
+}
+.icon-pesquisa2:before {
+  content: "\e908";
+}
+.icon-pesquisa3:before {
+  content: "\e909";
+}
+.icon-pesquisa4:before {
+  content: "\e90a";
+}
+.icon-pesquisa7:before {
+  content: "\e90b";
+}
+.icon-pesquisa8:before {
+  content: "\e90c";
+}
+.icon-qualidade2:before {
+  content: "\e915";
+}
+.icon-qualidade6:before {
+  content: "\e90d";
+}
+.icon-relatorio5:before {
+  content: "\e90e";
+}
+.icon-saida:before {
+  content: "\e90f";
+}
+.icon-solmat1:before {
+  content: "\e910";
+}
+.icon-suprimentos1:before {
+  content: "\e911";
+}
+.icon-ti2:before {
+  content: "\e912";
+}
+.icon-user:before {
+  content: "\e913";
+}
+.icon-user2:before {
+  content: "\e914";
+}
+.icon-bell:before {
+  content: "\e900";
+}

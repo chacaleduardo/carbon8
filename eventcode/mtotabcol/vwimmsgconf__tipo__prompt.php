@@ -1,0 +1,1 @@
+[{"T":"Tarefa"},{"M":"Mensagem"},{"A":"Assinatura"}]

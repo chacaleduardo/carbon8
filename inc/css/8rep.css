@@ -1,0 +1,178 @@
+html{
+	font-family: Arial, FreeSans, Sans,  Serif, SansSerif;
+	font-size: 10px;
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	margin:0px;
+	padding:0px;
+}
+.tbrepheader{
+	border: 0px;
+	width: 100%;
+}
+.tbrepheader .header{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.tbrepheader .subheader{
+	font-size: 10px;
+	color: gray;
+}
+.tbrepheader .titulo{
+	font-size: 18px;
+	font-weight: bold;
+}
+.tbrepheader .res{
+	font-size: 18px;
+}
+.normal{
+	border: 1px solid silver;
+	border-collapse: collapse;	
+}
+.normal table{
+	table-layout: fixed;
+    word-wrap: break-word;
+	    
+}
+.normal td{
+	border: 1px solid silver;
+	padding: 0px 3px 0px 3px;
+	text-transform: uppercase;
+	padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.normal .header{
+	font-size: 10px;
+	font-weight: bold;
+	color: rgb(75,75,75);
+	background-color: rgb(222,222,222);
+}
+.normal .res{
+	font-size: 10px;
+}
+
+.normal .res .link{
+	background-color:#FFFFFF;
+	cursor:pointer;
+}
+.normal .res .tot{
+	background-color:#E8E8E8;
+	font-weight: bold;	
+	text-align: center;
+}
+.normal .res .inv{
+	border: 0px;
+}
+.normal .tdcounter{
+	border:1px dotted rgb(222,222,222);
+	background-color:white;
+	color:silver;
+	font-size:8px;
+}
+.newreppage{
+	page-break-before: always;
+}
+.fldsheader{
+	border:none;
+	border-top: 2px solid silver;
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 5px;
+	padding-left:5px;
+}
+.fldsheader legend{
+	font-size: 8px;
+	color: gray;
+	background-color: white;
+}
+.fldsfooter{
+	border:none;
+	border-top: 2px solid silver;
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 5px;
+	padding-left:5px;
+}
+.fldsfooter legend{
+	font-size: 8px;
+	color: gray;
+	background-color: white;
+}
+a.btbr20{
+	display: none;
+}
+
+/* Botao branco fonte 8 */
+a.btbr20:link{
+	position: fixed;
+
+	right: 15px;
+
+    font-weight: bold;
+    font-size:20px;
+    color: silver;
+    
+	border: 1px solid #d7d7d7;
+    cursor: pointer;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+    margin-left: 5px;
+      
+	background: #cccccc; /* para browsers sem suporte a CSS 3 */
+
+	/* Gradiente */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ececec', endColorstr='#dcdcdc'); /* IE */
+	background: -webkit-gradient(linear, left top, right top, from(#ececec), to(#dcdcdc)); /* webkit */
+	background: -moz-linear-gradient(top,  #ececec, #dcdcdc); /* FF */
+
+    /* Arredondamento */
+	-moz-border-radius: 8px;
+ 	-webkit-border-radius: 8px;
+ 	border-radius: 8px 8px 8px 8px;
+ 	
+ 	text-decoration: none;
+}
+a.btbr20:hover
+{
+    font-weight: bold;
+    font-size:20px;
+    color: silver;
+    
+	border: 1px solid #d7d7d7;
+    cursor: pointer;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+    margin-left: 5px;
+
+	background: #eaeaf4; /* para browsers sem suporte a CSS 3 */
+
+	/* Gradiente */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0000', endColorstr='#c02900'); /* IE */
+	background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#c02900)); /* webkit */
+	background: -moz-linear-gradient(top, #ffffff, #e1e1e1); /* FF */
+
+    /* Arredondamento */
+	-moz-border-radius: 8px;
+ 	-webkit-border-radius: 8px;
+ 	border-radius: 8px 8px 8px 8px;
+ 	text-decoration: none;
+} 
+a.btbr20:visited {
+	border: 1px solid silver;
+	color:white;
+	text-decoration: none;
+}
+a.btbr20{
+	display: block;
+}

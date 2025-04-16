@@ -1,0 +1,48 @@
+table {
+    page-break-inside: auto;
+    width: 100%
+}
+
+tr {
+    page-break-inside: avoid;
+    page-break-after: auto
+}
+
+thead {
+    display: table-header-group
+}
+
+tfoot {
+    display: table-footer-group
+}
+
+@media print {
+
+    .no-print,
+    .no-print * {
+        display: none !important;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+footer {
+    font-size: 9px;
+    color: #f00;
+    text-align: center;
+}
+
+td table {
+    font-size: 10px !important;
+    border: 1px solid;
+    border-collapse: inherit;
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+    }
+}

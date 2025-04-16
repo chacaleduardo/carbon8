@@ -1,0 +1,25 @@
+#cbContainer{margin-right: 0;padding-left: 1rem !important;padding-right: 1rem !important;}
+#cbMenuSuperior{min-height: auto !important;}
+.navbar-nav > li {
+    padding: 0.5rem 0;
+}
+#cbMenuSuperior li
+{
+    color: rgb(245, 247, 250);
+}
+
+#cbMenuSuperior li.ativo, #cbMenuSuperior a:not(#cblogomenu):hover li, #cbMenuSuperior li:hover
+{
+    background-color: rgb(235, 239, 245);
+}
+#cbMenuSuperior li.ativo, #cbMenuSuperior a:not(#cblogomenu):hover li, #cbMenuSuperior li:hover span,
+#cbMenuSuperior li:hover a
+{
+    color: rgb(88, 96, 110);
+}
+
+._ncBellIcon_{
+    color: white;
+}
+
+[cbmodulo="notificacoes"]{display: none;}

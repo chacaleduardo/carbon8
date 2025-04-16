@@ -1,0 +1,84 @@
+.insumosEspeciais a i.fa{
+    display: inline-block !important;
+}	
+
+.itemestoque{
+    width:auto;
+    display: inline-block;
+    text-align: right;
+    margin: 3px;
+}
+.itemestoque.especial{
+    display:none;
+}
+.itemestoque.especial.especialvisivel{
+    display:inline-block !important;
+}
+
+.sem_margin{
+    margin: 0 !important;
+}
+
+.divsup{
+	border: 0px; /*borda zerada para nao ocasionar barras de rolagem*/
+	vertical-align: top;
+}
+
+.divmeio{
+display: table-cell; 
+height: 100%; 
+width: 30px;
+vertical-align:middle;
+}
+
+/* footer= linha onde fica os botàµes assinar retirar assinatura e o alerta*/
+#Footer {
+	text-align: center;
+	justify-content: center;
+    align-items: center;
+	color: black;
+	border: 1px solid silver;
+	position:fixed;
+	/**adjust location**/
+	right: 0px;
+	bottom: 0px;
+	padding: 0 10px 0 10px;
+	width: 100%;
+	/* Netscape 4, IE 4.x-5.0/Win and other lesser browsers will use this */
+	_position: absolute;
+}
+.clsFootera {
+	background: #00FF00;
+}	
+.clsFooterf {
+	background: silver;
+}
+
+/* Classes para os botes de direita e esquerda */
+.gor{ 
+	position: relative;
+	top: 280px;
+	float: right;
+	margin: 0px 0px 0px 0px;
+	width:30px;
+	z-index: 10; 
+}
+.gol{ 
+	position: relative;
+	top: 280px;
+	float: left;
+	margin: 0px 0px 0px 0px;
+	width:30px;
+	z-index: 10; 
+}
+.imggo{
+	opacity:0.35;
+	filter:alpha(opacity=35);
+	border:0;
+	cursor:pointer;
+}	
+
+.insumosEspeciais a i.fa{
+    display: inline-block !important;
+}	
+

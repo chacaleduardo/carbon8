@@ -1,0 +1,77 @@
+
+// Provide a default path to dwr.engine
+if (dwr == null) var dwr = {};
+if (dwr.engine == null) dwr.engine = {};
+if (DWREngine == null) var DWREngine = dwr.engine;
+
+if (MiscDwr == null) var MiscDwr = {};
+MiscDwr._path = '/dwr';
+MiscDwr.sendTestEmail = function(p0, p1, p2, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'sendTestEmail', p0, p1, p2, callback);
+}
+MiscDwr.toggleSilence = function(p0, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'toggleSilence', p0, callback);
+}
+MiscDwr.silenceAll = function(callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'silenceAll', callback);
+}
+MiscDwr.acknowledgeEvent = function(p0, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'acknowledgeEvent', p0, callback);
+}
+MiscDwr.acknowledgeAllPendingEvents = function(callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'acknowledgeAllPendingEvents', callback);
+}
+MiscDwr.toggleUserMuted = function(callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'toggleUserMuted', callback);
+}
+MiscDwr.getDocumentationItem = function(p0, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'getDocumentationItem', p0, callback);
+}
+MiscDwr.jsError = function(p0, p1, p2, p3, p4, p5, p6, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'jsError', p0, p1, p2, p3, p4, p5, p6, callback);
+}
+MiscDwr.setHomeUrl = function(p0, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'setHomeUrl', p0, callback);
+}
+MiscDwr.getHomeUrl = function(callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'getHomeUrl', callback);
+}
+MiscDwr.initializeLongPoll = function(p0, p1, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'initializeLongPoll', p0, p1, callback);
+}
+MiscDwr.doLongPoll = function(p0, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'doLongPoll', p0, callback);
+}
+MiscDwr.terminateLongPoll = function(p0, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'terminateLongPoll', p0, callback);
+}
+MiscDwr.terminateLongPollImpl = function(p0, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'terminateLongPollImpl', p0, callback);
+}
+MiscDwr.resetWatchlistState = function(p0, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'resetWatchlistState', p0, callback);
+}
+MiscDwr.notifyLongPoll = function(p0, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'notifyLongPoll', p0, callback);
+}
+MiscDwr.setLocale = function(p0, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'setLocale', p0, callback);
+}
+MiscDwr.setPoint = function(p0, p1, p2, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'setPoint', p0, p1, p2, callback);
+}
+MiscDwr.forcePointRead = function(p0, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'forcePointRead', p0, callback);
+}
+MiscDwr.addUserComment = function(p0, p1, p2, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'addUserComment', p0, p1, p2, callback);
+}
+MiscDwr.getDateRangeDefaults = function(p0, p1, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'getDateRangeDefaults', p0, p1, callback);
+}
+MiscDwr.generateContent = function(p1, p2, callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'generateContent', false, p1, p2, callback);
+}
+MiscDwr.initialize = function(callback) {
+  dwr.engine._execute(MiscDwr._path, 'MiscDwr', 'initialize', callback);
+}

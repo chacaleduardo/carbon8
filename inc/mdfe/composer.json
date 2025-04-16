@@ -1,0 +1,5 @@
+{
+    "require": {
+        "nfephp-org/sped-mdfe": "^4.1"
+    }
+}

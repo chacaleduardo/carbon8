@@ -1,0 +1,1 @@
+{"ATIVO":"Ativo","FINALIZADO":"Finalizado","CANCELADO":"Cancelado"}

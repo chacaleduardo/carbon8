@@ -1,0 +1,25 @@
+#controle-lote-vencimento .row {
+    margin: 0 !important
+}
+
+#controle-lote-vencimento th {
+    text-align: center !important;
+}
+
+.border {
+    border: 1px solid #ccc;
+    border-radius: .2rem;
+}
+
+#controle-lote-vencimento:not(:has(.check-produto:checked)) #btn-retirar {
+    pointer-events: none;
+    opacity: .4;
+}
+
+.lote-sem-descricao {
+    background-color: #fff70554 !important;
+}
+
+tr:not(:has(.check-produto:checked)) .descricao {
+    display: none;
+}

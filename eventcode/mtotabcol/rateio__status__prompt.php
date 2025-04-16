@@ -1,0 +1,2 @@
+[{"ABERTO":"ABERTO"},
+{"FECHADO":"FECHADO"}]

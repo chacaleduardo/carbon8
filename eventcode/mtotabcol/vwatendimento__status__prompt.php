@@ -1,0 +1,1 @@
+[{"FINALIZADO":"Finalizado"},{"AGUARDAR":"Aguardando Retorno"},{"RETORNAR":"Retornar"}]

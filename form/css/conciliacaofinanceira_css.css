@@ -1,0 +1,305 @@
+.border-black {
+    border: 1px solid #000000;
+}
+
+.dropdown-toggle {
+    height: 100%;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.form-control {
+    height: 38px !important;
+}
+
+#cbModuloForm {
+    font-size: 13px;
+}
+
+.border {
+    border: 0.5px solid #D7D7D7;
+}
+
+.bg-100 {
+    background-color: #69B769;
+}
+.bg-75 {
+    background-color: #B1F8B1;
+}
+.bg-50 {
+    background-color: #FFFF99;
+}
+.bg-0 {
+    background-color: #FFCCD1;
+}
+
+#tabela-lancamentos #header * {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#painel-conciliacao {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding-left: 60px;
+    background-color: #C0C0C0;
+    z-index: 1;
+}
+
+#painel-conciliacao .btn-success {
+    background-color: #27651F !important;
+}
+
+.lancamento-item {
+    height: 50px;
+    transition: .3s ease 0s;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .lancamento-item {
+        height: 75px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .lancamento-item {
+        height: 50px;
+    }
+}
+
+#itens-lancamento:has(.lancamento-pai-fatura):has( .check-fatura:checked) .check-fatura:not(:checked),
+#itens-lancamento:has(.lancamento-pai-sistema):has( .check-sistema:checked) .check-sistema:not(:checked),
+.pai .check-sistema,
+#itens-lancamento:has(.lancamento-item[data-porcentagem="0"] .check-fatura:checked) .lancamento-item:not([data-porcentagem="0"]) .check-sistema,
+#itens-lancamento:has(.lancamento-item[data-porcentagem="0"] .check-fatura:checked) .lancamento-item:not([data-porcentagem="0"]) .check-fatura,
+#itens-lancamento:has(.lancamento-item[data-porcentagem="0"] .check-sistema:checked) .lancamento-item:not([data-porcentagem="0"]) .check-fatura,
+#itens-lancamento:has(.lancamento-item[data-porcentagem="0"] .check-sistema:checked) .lancamento-item:not([data-porcentagem="0"]) .check-sistema
+{
+    display: none !important;
+}
+
+#itens-lancamento:has(.lancamento-pai-fatura):has( .check-fatura:checked) .lancamento-item:not(:has( .check-fatura:checked)) label:not([onclick]).fatura,
+#itens-lancamento:has(.lancamento-pai-sistema):has( .check-sistema:checked) .lancamento-item:not(:has( .check-sistema:checked)) label:not([onclick]).sistema,
+#itens-lancamento:has( .check-fatura:checked) .lancamento-item:has( .check-fatura.hide) label:not([onclick]).fatura,
+#itens-lancamento .bg-100.conciliado label:not([onclick]).sistema, #itens-lancamento .bg-100.conciliado label:not([onclick]).fatura,
+.lancamento-item[data-idpai]:not([data-idpai='']) label:not([onclick]).sistema,
+.lancamento-item label:not([onclick]).sem-lancamento,
+#itens-lancamento:has(.lancamento-item[data-porcentagem="0"] .check-fatura:checked) .lancamento-item:not([data-porcentagem="0"]) label:not([onclick]).sistema,
+#itens-lancamento:has(.lancamento-item[data-porcentagem="0"] .check-fatura:checked) .lancamento-item:not([data-porcentagem="0"]) label:not([onclick]).fatura,
+#itens-lancamento:has(.lancamento-item[data-porcentagem="0"] .check-sistema:checked) .lancamento-item:not([data-porcentagem="0"]) label:not([onclick]).fatura,
+#itens-lancamento:has(.lancamento-item[data-porcentagem="0"] .check-sistema:checked) .lancamento-item:not([data-porcentagem="0"]) label:not([onclick]).sistema {
+    pointer-events: none;
+}
+
+.lancamento-item.grupo:has( + .lancamento-item.grupo),
+.lancamento-item[data-idpai]:not([data-idpai='']):has(+ .lancamento-item[data-idpai]:not([data-idpai=''])),
+.pai {
+    margin-bottom: 0 !important;
+}
+
+.btn-aprovar, .btn-desagrupar, input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.text-black {
+    color: #000 !important;
+} 
+
+.user-select-none {
+    user-select: none;
+}
+
+.lancamento-item .fatura:hover, .lancamento-item .sistema:hover {
+    background-color: rgba(255 ,255 ,255 , 0.3);
+}
+
+.lancamento-item[data-idpai]:not([data-idpai='']):not([data-dataemissaosistema='']) label.fatura,
+.lancamento-item[data-idpai]:not([data-idpai='']):not([data-dataemissaofatura='']) label.sistema,
+.lancamento-item[data-idpai]:not([data-idpai='']) .check-fatura,
+.lancamento-item[data-idpai]:not([data-idpai='']) .check-sistema, .lancamento-item[data-idpai]:not([data-idpai='']) .btn-desagrupar,
+.lancamento-item[data-idpai]:not([data-idpai='']) .btn-aprovar,
+.lancamento-item:not([data-dataemissaofatura='']).pai label.sistema .total-sistema,
+.lancamento-item:not([data-dataemissaosistema='']).pai label.fatura .total-fatura,
+.lancamento-item:has( .fatura.sem-lancamento) .check-fatura,
+.lancamento-item:has( .sistema.sem-lancamento) .check-sistema {
+    z-index: -1;
+    user-select: none;
+    opacity: 0;
+}
+
+.dz-filename {
+    max-width: 12ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dz-preview.dz-file-preview:hover {
+    background-color: transparent !important;
+}
+
+.link-fatura, .icone-apagar-lancamento {
+    font-size: 14px;
+    color: #000000;
+}
+
+#total-lancamentos-fatura, #total-lancamentos-sistema{
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: .4rem;
+    padding: 1rem 0;
+}
+
+#total-lancamentos .divergente {
+    background-color: rgb(247, 0, 0, .1);
+    color: rgb(247, 0, 0);
+}
+
+#total-lancamentos .igual {
+    background-color: rgb(0, 246, 10, .2);
+    color: rgb(58, 135, 58);
+}
+
+#cbModalTitulo {
+    display: flex;
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+div:has( > .status) {
+    width: 50px;
+}
+
+@media (max-width: 768px){
+    span {
+        font-size: 10px !important;
+    }
+
+    .lancamento-item span {
+        font-size: 8px !important;
+    }
+
+    #itens-lancamento .acoes,
+    #itens-lancamento div:has( > .btn-enviar-mensagem),
+    #itens-lancamento div:has( > .btn-info-mensagem),
+    #tabela-lancamentos #header .acoes,
+    #tabela-lancamentos #header .cabecalho-sistema,
+    #tabela-lancamentos #header input,
+    #tabela-lancamentos #header > span,
+    #itens-lancamento input,
+    #itens-lancamento div:has( > [type="checkbox"]) input,
+    #painel-conciliacao,
+    #total-lancamentos {
+        display: none !important;
+    }
+
+    #header .cabecalho-fatura  {
+        padding: 0;
+    }
+
+    .lancamento-item {
+        height: auto !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        align-items: center;
+    }
+
+    label.fatura > span:first-child,
+    label.sistema > span:first-child {
+        padding-left: 0 !important;
+    }
+
+    label.fatura,
+    label.sistema {
+        justify-content: flex-start !important;
+    }
+
+    .icone-mensagem-mobile {
+        display: block !important;
+        position: absolute;
+        right: 1rem;
+    }
+    
+    .lancamento-item:has( .icone-mensagem-mobile) {
+        background-color: #FAFAFA;
+        border: 1px solid #000000;
+    }
+
+    .lancamento-item .porcentagem {
+        padding: 0;
+    }
+
+    h3 {
+        font-size: 13px;
+    }
+
+    .text-xs-end {
+        text-align: right;
+    }
+}
+
+@media (min-width: 768px) {
+    #itens-lancamento.leitura *,
+    #itens-lancamento.desabilitado:not(.APROVACAOSOLICITADA) label,
+    #itens-lancamento.desabilitado:not(.APROVACAOSOLICITADA) input {
+        pointer-events: none !important;
+    }
+
+    #itens-lancamento.leitura input,
+    #itens-lancamento.leitura .lancamento-item .acoes,
+    #itens-lancamento.leitura .lancamento-item .btn-info-mensagem,
+    #itens-lancamento.desabilitado:not(.APROVACAOSOLICITADA) input,
+    #itens-lancamento.desabilitado:not(.APROVACAOSOLICITADA) .btn-aprovar,
+    #itens-lancamento.desabilitado .lancamento-item .acoes .btn-desagrupar,
+    #itens-lancamento.desabilitado .lancamento-item .acoes .icone-apagar-lancamento
+    {
+        display: none !important;
+    }
+
+    .modal-dialog:has( #linha-excel-data-inicio) {
+        width: 900px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .acoes {
+        gap: .2rem !important;
+    }
+    
+    .acoes svg {
+        width: 14px !important;
+    }
+}
+
+.btn-orange {
+    background-color: #FF7A00;
+    color: #FFFFFF;
+}
+
+#painel-conciliacao .badge {
+    position: absolute;
+    right: -0.6rem;
+    top: -0.6rem;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #006deb;
+    color: #FFFFFF;
+    opacity: 0;
+    transition: .3s ease 0s;
+    border-radius: 100%;
+}
+
+#linha-excel-data-inicio, #linha-excel-data-fim {
+    width: 45% !important;
+}

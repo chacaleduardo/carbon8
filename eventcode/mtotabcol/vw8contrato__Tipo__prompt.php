@@ -1,0 +1,1 @@
+﻿[{"Prod":"Produto"},{"Serv":"Serviço"}]

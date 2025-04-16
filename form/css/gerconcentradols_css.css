@@ -1,0 +1,93 @@
+.insumosEspeciais a i.fa 
+{
+	display: inline-block !important;
+}
+
+.itemestoque 
+{
+	width: 100%;
+	width: auto;
+	display: inline-block;
+	margin: 3px;
+}
+
+.itemestoque.especial 
+{
+	display: none;
+}
+
+.itemestoque.especial.especialvisivel 
+{
+	display: inline-block !important;
+}
+
+.ml15
+{
+	margin-left: 15px;
+}
+
+.alinharlabelcheckbox
+{
+	margin-left: 15px;
+	position: relative;
+    bottom: 4px;
+}
+
+a.tip
+{
+	padding-left: 10px;
+}
+
+a.tip:hover 
+{
+	cursor: hand;
+	position: relative;
+}
+
+a.tip span 
+{
+	display: none;
+}
+
+a.tip:hover span 
+{
+	border: #c0c0c0 1px dotted;
+	padding: 5px 20px 5px 5px;
+	display: block;
+	z-index: 100;
+	background: #f0f0f0 no-repeat 100% 5%;
+	left: 0px;
+	margin: 10px;
+	width: 550px;
+	position: absolute;
+	top: 10px;
+	text-decoration: none;
+}
+
+.roxo 
+{
+	color: #933aa0ad !important;
+}
+
+.informacoesLote
+{
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    color: gray;
+    background-color: white !important;
+    padding: 10px 5px 5px 20px !important;
+    width: auto;
+	line-height: 1.5;
+}
+
+.topPanel
+{
+	margin-top: -5px !important;
+}
+
+.formalizacao-popover
+{
+	z-index: 10;
+	padding: 0 .5rem;
+	cursor: pointer;
+}

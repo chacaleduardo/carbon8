@@ -1,0 +1,255 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background-color: RGBA(51, 56, 64, 0.6);
+    z-index: -1;
+    backdrop-filter: blur(1px);
+    opacity: 0;
+    transition: opacity 0.3s ease 0s, z-index 0s ease 0.3s;
+    }
+
+    .overlay:has(~ #sidebar.opened) {
+    transition: opacity 0.3s ease 0.1s, z-index 0s ease 0s;
+    z-index: 999;
+    opacity: 1;
+    }
+
+    .modal-snippet-action {
+    max-width: 100vw;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: -999;
+    transition: 0.3s ease 0s;
+    transition: z-index 0s ease 0.2s, opacity 0.3s ease 0s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    }
+    .m-auto, .ml-auto, .mx-auto {
+        margin-left: auto !important;
+    }
+    .text-gray-10 {
+        color: RGB(245, 247, 250) !important;
+    }
+
+    .m-4, .mb-4, .my-4 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .p-2, .pb-2, .py-2 {
+        padding-bottom: 0.5rem !important;
+    }
+    .p-2, .pr-2, .px-2 {
+        padding-right: 0.5rem !important;
+    }
+    .p-2, .pt-2, .py-2 {
+        padding-top: 0.5rem !important;
+    }
+    .p-2, .pl-2, .px-2 {
+        padding-left: 0.5rem !important;
+    }
+
+    .right-0 {
+        right: 0 !important;
+    }
+    .text-gray-20 {
+        color: RGB(235, 239, 245) !important;
+    }
+@media(max-width: 768px)
+{
+    #cbMenuSuperior{display: none !important;}
+}
+
+#cbContainer{
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+}
+
+@media(min-width: 768px)
+{
+    #cbContainer{
+        width:94% !important;
+    }
+}
+#cblogomenu{
+    margin-right: auto;
+}
+.navbar-nav > li.snippet {
+    justify-content: center;
+    display: flex;
+    flex-direction: column-reverse;
+    /*background-color: #666;*/ /*maf: corrigir fundo branco por causa de overflow no body nos elementos parent*/
+}
+.navbar-nav > li.snippet > * {
+    height: auto!important;
+    position: initial!important;
+}
+.navbar-nav > li.snippet a{
+    height: 100%!important;
+}
+.navbar-nav > li {
+    height: 40px;
+}
+#cbMenuSuperior li.ativo{
+    background-color: #EFF0F2;
+}
+#cbMenuSuperior li.ativo a{
+    fill: black;
+    color: rgb(92, 204, 204);
+    font-weight: bold;
+}
+
+._ncBellIcon_{
+    padding-top: 14px!important;
+    padding-bottom: 14px!important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 12px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 9px;
+    color: white;
+}
+
+.pe-0
+{
+    padding-right: 0rem!important;
+}
+.ps-0
+{
+    padding-left: 0rem!important;
+}
+.ps-3
+{
+    padding-left: 1rem!important;
+}
+.ps-4
+{
+    padding-left: 1.5rem!important;
+}
+.py-0 {
+    padding-top: 0rem!important;
+    padding-bottom: 0rem!important;
+}
+.py-3 {
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+}
+.py-4 {
+    padding-top: 1.5rem!important;
+    padding-bottom: 1.5rem!important;
+}
+.px-0 {
+    padding-right: 0!important;
+    padding-left: 0!important;
+}
+
+.px-1 {
+    padding-right: 0.25rem!important;
+    padding-left: 0.25rem!important;
+}
+.px-2 {
+    padding-right: 0.5rem!important;
+    padding-left: 0.5rem!important;
+}
+.px-3 {
+    padding-right: 1rem!important;
+    padding-left: 1rem!important;
+}
+.m-0
+{
+    margin: 0 !important;
+}
+
+.mt-0, .my-0
+{
+    margin-top: 0 !important;
+}
+
+.mb-0, .my-0
+{
+    margin-bottom: 0 !important;
+}
+
+.mb-3
+{
+    margin-bottom: 1rem !important;
+}
+
+.ml-2, .mx-2
+{
+    margin-left: 0.5rem!important;
+}
+
+.mr-2,  .mx-2
+{
+    margin-right: 0.5rem!important;
+}
+
+.mt-2
+{
+    margin-top: 0.5rem!important;
+}
+
+.mt-3
+{
+    margin-top: 1rem!important;
+}
+.mr-auto, .mx-auto
+{
+    margin-right: auto !important;
+}
+.mb-5
+{
+    margin-bottom: 3rem!important;
+}
+.ml-auto
+{
+    margin-left: auto;
+}
+
+.mr-4 {
+    margin-right: 1.5rem!important;
+}
+
+.ml-4 {
+    margin-left: 1.5rem!important;
+}
+.mx-3 
+{
+    margin-left: 1rem!important;
+}
+
+.mr-3, .mx-3
+{
+    margin-right: 1rem!important;
+}
+
+.mx-4 
+{
+    margin-right: 1.5rem!important;
+    margin-left: 1.5rem!important;
+}
+
+.mx-5 
+{
+    margin-right: 3rem!important;
+    margin-left: 3rem!important;
+}
+
+.ms-3 {
+    margin-left: 1rem!important;
+}
+
+.mb-2 {margin-bottom: 0.5rem!important;}

@@ -1,0 +1,373 @@
+<?
+
+	// Define fuso horário local
+	date_default_timezone_set('America/Sao_Paulo');
+	
+	ini_set("display_errors",0);
+	header('Content-Type: application/json');
+	
+	// Inclui banco de dados
+	include_once("/var/www/laudo/functions/functions.php");
+	conectabanco();
+	
+	// Variável para definir o número de batidas
+	$limite = 100;
+
+	// Caminho do arq log
+	global $arqlog;
+	$arqlog = '/var/www/carbon8/tmp/log/rep/'.$_SERVER["REMOTE_ADDR"].'.log';
+	$arqlog_sql = '/var/www/carbon8/tmp/log/rep/'.$_SERVER["REMOTE_ADDR"].'_sql.log';
+	
+	// Grava o ip do ponto na variável
+	$ipponto = $_SERVER["REMOTE_ADDR"];
+	$ipponto_2 = str_replace("." , "" , $ipponto);
+
+	// Define hora e data atual
+	$today = date("Y-m-d H:i:s"); 
+	
+	// Armazena data e hora no arquivo log
+	// ************************* MAF: ATIVAR ESTA LINHA SOMENTE PARA DEBUG: DESATIVAR EM SEGUIDA ***********************
+	// CASO ESTA LINHA NAO SEJA DESATIVADA, DEVE SER GERADA UMA NAO-CONFORMIDADE PARA CADA CASO
+	file_put_contents($arqlog, PHP_EOL.$today, FILE_APPEND | LOCK_EX);
+
+	//	Recebe os dados do post pelo servidor
+	$inputjson = json_decode(file_get_contents("php://input"), true);
+	
+	//	Armazena os dados do post no arquivo log
+	// ************************* MAF: ATIVAR ESTA LINHA SOMENTE PARA DEBUG: DESATIVAR EM SEGUIDA ***********************
+	// CASO ESTA LINHA NAO SEJA DESATIVADA, DEVE SER GERADA UMA NAO-CONFORMIDADE PARA CADA CASO
+	file_put_contents($arqlog, PHP_EOL."---------> APPJSON". print_r($inputjson, true).PHP_EOL, FILE_APPEND | LOCK_EX); 
+
+	//	Transforma os dados de json para array
+	$dados = array();
+	$dados = json_decode($inputjson['envia'],true);
+	
+	// Seleciona na tabela rep o idrep e o tipo do rep que esteja ATIVO
+	$sqlrep = "select idrep, idempresa, tipo from rep where ip = '".$ipponto."' and not status = 'INATIVO'";
+	$resrep = mysql_query($sqlrep);
+	while ($linharep = mysqli_fetch_array($resrep)){	
+		$idrep = $linharep['idrep'];
+		$tiporep = $linharep['tipo'];
+		$idempresa = $linharep['idempresa'];
+	}
+
+	// Estrutura por condições de acordo com a requisição (req) vindo do rep
+	if(!empty($dados["req"]) and !empty($idrep)){
+		
+		switch ($dados["req"]){
+			
+			//	Requisição inicial (rep->aplic)
+			//	Comando: {"req":"ini"}
+			case 'ini':
+				if(!empty($dados["nsr"])){
+					$str = buscaBatida($idrep,$dados,$idempresa);
+				}else{
+					// Chama função para listar os PIS dos funcionários cadastrados no rep
+					$str = listaFuncionariosPis();
+				}
+			break;
+
+			// Requisição para ler funcionarios (aplic->rep)
+			// Comando: {"cmd":"lista_PIS"}
+			case 'lista_PIS':	
+				// Chama função para cadastrar novos funcionarios cadastrados no sisLaudo em cada rep
+				$str = atualizarnovofuncponto($dados,$ipponto,$idrep,$tiporep,$idempresa,$arqlog);
+			break;
+
+			// Requisição para sincronizar dados de um funcionario (aplic->rep)
+			// Comando: {"cmd":"pede_dados_PIS","PIS":"12345"}
+			case 'pede_dados_PIS':
+				// Chama função para atualizar o banco de dados com os dados vindo do rep
+				atualizaBD($dados,$idrep,$idempresa);	
+			break;
+				
+			case 'cfg_funcionarios':
+				// Chama função para verificar batidas(registros) atual do AFD
+				$str = verificabatida();
+			break;	
+			
+			// Requisição para verificar batidas(registros) atual do AFD (aplic->rep)
+			// Comando: {"cmd":"NSR"}
+			case 'NSR':
+				$str = buscaBatida($idrep,$dados,$idempresa);
+			break;
+				
+			// Requisição dos registros (aplic->rep)
+			// Comando: {"cmd":"AFD","nsr_ini":"1","nsr_fim":"200"}
+			case 'AFD':
+				// Chama função que atualiza as batidas no banco de dados
+				trataBatida($dados,$idrep,$idempresa);
+				// Chama função para o rep dormir
+				$str = dorme();
+			break;
+		}
+	}else{
+		// Chama função para o rep dormir
+		$str = dorme();
+	}
+	// Armazena a requisição enviada ao rep no arquivo log
+	// ************************* MAF: ATIVAR ESTA LINHA SOMENTE PARA DEBUG: DESATIVAR EM SEGUIDA ***********************
+	// CASO ESTA LINHA NAO SEJA DESATIVADA, DEVE SER GERADA UMA NAO-CONFORMIDADE PARA CADA CASO
+	file_put_contents($arqlog, PHP_EOL."<---------- ".$str." ".PHP_EOL,FILE_APPEND | LOCK_EX);
+	
+	// Envia a requisição ao rep
+	echo $str;
+
+// Função para listar os PIS dos funcionários cadastrados no rep 
+function listaFuncionariosPis(){
+	// Comando para listar os funcionários do rep pelo pis
+	$str = '{"cmd":"lista_PIS"}';
+	return $str;
+}
+
+// Função para verificar status do banco de dados para o rep MASTER
+function verificarstatusBD($ipponto,$idrep,$idempresa){
+	
+	// Seleciona na tabela reppessoa o idpessoa do funcionário que precisa ser atualizado
+	$status = "select idpessoa from reppessoa where status = 'ATUALIZARBD' and idrep = ".$idrep." and idempresa = '".$idempresa."' limit 1";
+	$result = mysql_query($status);
+	while ($status = mysql_fetch_array($result)) {
+		$id_func = $status['idpessoa'];	
+	}
+	
+	// Seleciona na tabela pessoa o idpessoa e pis do funcionário que precisa ser atualizado
+	$info_funcionarios = "select pis, idpessoa from pessoa where idpessoa = ".$id_func." and status = 'ATIVO' and idtipopessoa = 1 and idempresa = '".$idempresa."'";
+	$resi = mysql_query($info_funcionarios);
+	$atualizar = false;
+	
+	while ($info_funcionarios = mysqli_fetch_array($resi))
+		{					
+			$id_funcionario = $info_funcionarios['idpessoa'];
+			$PIS_funcionario =  preg_replace("/[^0-9]/", "", $info_funcionarios['pis']);
+			// Comando para pedir ao rep os dados do funcionário pelo PIS do funcionário armazenado em PIS_funcionario
+			$str = '{"cmd":"pede_dados_PIS","PIS":"'.$PIS_funcionario.'"}';
+			$atualizar = true;	
+			break;
+		}
+	if ($atualizar == false){
+		// Chama função para verificar batidas(registros) atual do AFD
+		$str = verificabatida();
+	}
+	return $str;
+}
+
+// Função para atualizar os reps SECUNDARIOS
+function atualizaPonto($idrep,$ipponto,$idempresa){
+	
+	// Seleciona na tabela reppessoa o funcinário que está com status 'ATUALIZARPONTO' 	
+	$statusrep = "select * from reppessoa where status = 'ATUALIZARPONTO' and idrep = ".$idrep." and idempresa = '".$idempresa."'";
+	$result = mysql_query($statusrep);
+	$virgula = "";
+	$inf = "";
+	$id_func = "";
+	while ($statusrep = mysql_fetch_array($result)) {
+		$id_func .= $virgula.$statusrep['idpessoa'];
+		$virgula = ",";
+	}
+	
+	// Seleciona na tabela pessoa o funcionário que tenha o idpessoa = ao id_func
+	$info_funcionarios = "select idpessoa, nome, pis, biodados, biodados_tempo from pessoa where idpessoa IN ($id_func) and status = 'ATIVO' and idtipopessoa = 1 and idempresa = '".$idempresa."'";
+	$resi = mysql_query($info_funcionarios);		
+	$virgula = "";
+	if(!empty($id_func)){	
+
+		// Armazena na variável 'inf' os dados dos funcionarios selecionados na tabela pessoa
+		while ($info_funcionarios = mysqli_fetch_array($resi))
+			{					
+				$id_funcionario = $info_funcionarios['idpessoa'];
+				$PIS_funcionario =  preg_replace("/[^0-9]/", "", $info_funcionarios['pis']);
+				$nome_funcionario = $info_funcionarios['nome'];	
+				$biodados_funcionario = $info_funcionarios['biodados'];	
+				$biodadostempo_funcionario = $info_funcionarios['biodados_tempo'];
+				$codbarras_funcionario = str_pad($info_funcionarios['idpessoa'] , 6 , '0' , STR_PAD_LEFT);
+															
+				$inf .= $virgula.'{"ID":"'.$id_funcionario.'","PIS":"'.$PIS_funcionario.'","Nome":"'.$nome_funcionario.'","BioDados":"'.$biodados_funcionario.'","CodBarras":"'.$codbarras_funcionario.'","MiFareDado":"","Passwd":"","Tempo":"'.$biodadostempo_funcionario.'"}';
+				$virgula = ",";
+				// Atualiza na tabela rep o status para 'ATUALIZADO' do rep
+				$update = mysql_query("UPDATE reppessoa SET  status = 'ATUALIZADO' WHERE idrep = '".$idrep."' and idpessoa = ".$id_funcionario." and idempresa = '".$idempresa."'");
+			}
+		
+		if (!empty($inf)){
+		// Comando para armazenar no rep os novos funcionários
+			$str = '{"cmd":"cfg_funcionarios","Funcionarios":['.$inf.']}';
+		}else{
+			$str = verificabatida();
+		}
+	}else{
+		// Chama função para verificar batidas(registros) atual do AFD
+		$str = verificabatida();
+	}
+	return $str;
+}
+
+// Atualiza o funcionário no banco de dados
+function atualizaBD($dados,$idrep,$idempresa){
+	$registro = "";
+	$registro = $dados['Funcionario'];
+	// Atualiza biometria do funcionário na tabela pessoa 
+	$update = mysql_query("UPDATE pessoa SET biodados ='".$registro['BioDados']."' WHERE  pis = '".$registro['PIS']."' and status = 'ATIVO' and idtipopessoa = 1 and idempresa = '".$idempresa."'");
+	// Atualiza status da tabela reppessoa para 'ATUALIZADO' quando o rep for MASTER
+	$update = mysql_query("UPDATE reppessoa SET status = 'ATUALIZADO' WHERE idpessoa = '".$registro['ID']."' and idrep = '".$idrep."' and idempresa = '".$idempresa."'");
+	// Atualiza status da tabela reppessoa para 'ATUALIZARPONTO' quando o rep for SECUNDARIO
+	$update = mysql_query("UPDATE reppessoa SET status = 'ATUALIZARPONTO' WHERE idpessoa = '".$registro['ID']."' and not idrep = '".$idrep."' and idempresa = '".$idempresa."'");
+}
+
+// Função para atualizar novo funcionário cadastrado no sisLaudo em cada rep
+function atualizarnovofuncponto($dados,$ipponto,$idrep,$tiporep,$idempresa,$arqlog){
+	$j =0;
+	$virgula = "";
+	$info = "";
+	$info_funcionarios = "";
+	$_inf = "";
+	
+	// Armazena na variável 'info' todos os PIS dos funcionários cadastrados no rep
+	foreach ($dados['lista'] as $d) {
+		$registro = $dados['lista'][$j];
+		$pis_func = $registro['PIS'];						
+		$info .= "$virgula"."$pis_func";
+		$virgula = ",";
+		$j++;
+	}
+	
+	// Verifica se info está vazia
+	if (!empty($info)){
+		$sql_info = "replace(replace(pis,'-',''),'.','')  not in ($info) and ";
+	}else{
+		$sql_info = "replace(replace(pis,'-',''),'.','')  not in ('$info') and ";
+	}
+
+	// Seleciona os funcionários no banco que são diferentes do rep
+	$info_funcionarios = "select idpessoa, nome, pis, biodados, biodados_tempo from pessoa where ".$sql_info." idempresa = '".$idempresa."' and idtipopessoa = 1 and status = 'ATIVO' and pis != '' and pis != '000000000000'";
+	$resi = mysql_query($info_funcionarios);						
+	$virgula = "";
+
+	// Armazena a requisição enviada ao rep no arquivo log
+	file_put_contents($arqlog, PHP_EOL."<---------- ".$info_funcionarios." ".PHP_EOL,FILE_APPEND | LOCK_EX);
+
+	// Armazena a requisição enviada ao rep no arquivo log
+	file_put_contents($arqlog, PHP_EOL."<----------IDREP:".$idrep." ".PHP_EOL,FILE_APPEND | LOCK_EX);
+
+	// Armazena na variável 'inf' os funcionários diferentes do rep
+	while ($info_funcionarios = mysqli_fetch_array($resi))
+		{					
+			$id_funcionario = $info_funcionarios['idpessoa'];
+			$PIS_funcionario =  preg_replace("/[^0-9]/", "", $info_funcionarios['pis']);
+			$nome_funcionario = $info_funcionarios['nome'];	
+			$biodados_funcionario = $info_funcionarios['biodados'];	
+			$biodadostempo_funcionario = $info_funcionarios['biodados_tempo'];	
+												
+			$_inf .= $virgula.'{"ID":"'.$id_funcionario.'","PIS":"'.$PIS_funcionario.'","Nome":"'.$nome_funcionario.'","BioDados":"'.$biodados_funcionario.'","CodBarras":"","MiFareDado":"","Passwd":"","Tempo":"'.$biodadostempo_funcionario.'"}';
+			$virgula = ",";
+		}
+		
+	if (!empty($_inf)){
+		if($idrep == 2 || $idrep == 4){
+			// Comando para armazenar no rep os novos funcionários
+			$str = '{"cmd":"cfg_funcionarios","Funcionarios":['.$_inf.']}';
+		}else{
+			$str = verificabatida();
+		}
+	}else{
+		$str = verificabatida();
+	}
+	
+	/*else{
+		// Condição para quando o rep for MASTER , no qual são cadastradas as biometrias
+		if ($tiporep == 'MASTER'){
+			// Chama função para verificar status do banco de dados para o rep MASTER
+			$str = verificarstatusBD($ipponto,$idrep,$idempresa);
+		}else{
+			// Chama função para atualizar os reps SECUNDARIOS
+			$str = atualizaPonto($idrep,$ipponto,$idempresa);
+		}
+	}*/
+
+	return $str;
+}
+
+// Função de busca das últimas batidas cadastradas no banco de dados e rep
+function buscaBatida($idrep,$dados,$idempresa){
+	// Seleciona na tabela ponto a última batida armazena para o IP do rep
+	$sql = "select ncomprovante as pcomprovante 
+			from ponto
+			where idrep = '".$idrep."'
+			order by ncomprovante desc
+			limit 1";
+	$res = mysql_query($sql);
+	$row = mysql_fetch_assoc($res);
+	
+	// Define o inicio e final das batidas a serem buscadas no rep
+	$nsr_ini = $row['pcomprovante'];
+	$nsr_fim = $dados['nsr'];
+	
+	// Comando para buscar batidas no rep
+	$str = '{"cmd":"AFD","nsr_ini":"'.$nsr_ini.'","nsr_fim":"'.$nsr_fim.'"}';
+	
+	return $str;
+}
+
+// Função para o rep dormir
+function dorme(){
+	// Comando para o rep dormir
+	$str='{"cmd":"dorme","tempo":300}';
+	return $str;
+}
+
+// Função verificar batidas(registros) atual do AFD
+function verificabatida(){
+	// Comando para o rep verificar batidas(registros) atual do AFD
+	$str='{"cmd":"NSR"}';
+	return $str;
+}
+
+// Função que atualiza as batidas no banco de dados
+function trataBatida($dados,$idrep,$idempresa){
+	$i = 0;
+	global $arqlog_sql;
+	foreach ($dados['registros'] as $d) {
+	  		
+		$registro = $dados['registros'][$i];	
+		$comprovante = substr($registro, 0, 9);  
+		$batida = substr($registro, 9, 1);
+		$strdate = substr($registro, 10,8);	
+		$newdate = substr($strdate,4,4)."-".substr($strdate,2,2)."-".substr($strdate,0,2);
+		$strhora = substr($registro, 18,4);
+		$newhora = substr($strhora,0,2).":".substr($strhora,2,2).":00";	
+		$vpis = substr($registro, 22,12);
+		
+		// Insere as batidas na tabela ponto a partir do segundo registro e quando a batida for igual a 3 (biometria)
+		if ($i != '0' and $batida == 3){
+			
+				$sqlb="select if(r.entsaida='E','S','E') as status, p.idpessoa, p.idempresa
+				from pessoa p
+				left join rhevento r on p.idpessoa = r.idpessoa and r.idrhtipoevento = 1 
+				where replace(replace(p.pis,'-',''),'.','') = '".$vpis."' and p.status = 'ATIVO' and p.idtipopessoa = 1
+				order by r.idrhevento desc limit 1;";
+				
+				
+				$resb = mysql_query($sqlb);
+				$qtdrows = mysql_num_rows($resb);
+				$rowb = mysql_fetch_assoc($resb);
+				$idpessoa = $rowb['idpessoa'];
+				if($qtdrows>0){
+					$status=$rowb['status'];
+				}else{
+					$status='E';
+				}
+
+				if(!empty($idpessoa)){
+					$sqli="insert into ponto (idrep,idempresa,registro,ncomprovante,status,idpessoa,data,hora,batida,criadopor,criadoem,alteradopor,alteradoem) 
+					values ('".$idrep."','".$rowb['idempresa']."','".$registro."',".$comprovante.",'".$status."','".$idpessoa."',STR_TO_DATE('".$newdate."','%Y-%m-%d'),'".$newhora."','ATIVO','laudo',sysdate(),'laudo',sysdate());";	
+					mysql_query($sqli);
+				}
+				
+		}
+		$i++;
+		file_put_contents($arqlog_sql, PHP_EOL."<---------- ".$sqlb.$sqli." ".$registro." ".date("Y-m-d h:i:sa")." ".PHP_EOL,FILE_APPEND | LOCK_EX);
+
+	}
+
+	file_put_contents($arqlog_sql, PHP_EOL."<---------- count".count($dados['registros'])." ".date("Y-m-d h:i:sa").PHP_EOL,FILE_APPEND | LOCK_EX);
+
+	
+}

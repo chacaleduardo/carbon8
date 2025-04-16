@@ -1,0 +1,100 @@
+@use '../variaveis'
+@use '../mixins'
+
+.modal-snippet-action
+    max-width: 100vw
+    width: 100%
+    height: 100vh
+    position: fixed
+    z-index: -999
+    transition: .3s ease 0s
+    transition: z-index 0s ease .2s, opacity .3s ease 0s
+    opacity: 0
+    @include mixins.flex-center
+    align-items: flex-start
+
+    .overlay
+        background-color: RGBA(#{variaveis.$gray-100}, .8)
+
+    &.modal-open
+        z-index: 99999
+        opacity: 1
+        transition: z-index 0s ease 0s, opacity .3s ease .2s
+
+        .overlay
+            opacity: 1
+            z-index: 1
+
+.modal-snippet-action
+    cursor: pointer
+
+    &-body
+        position: relative
+        @include mixins.flex-center
+
+    &-content
+        width: 85%
+        position: relative
+        flex-direction: column
+        z-index: 2
+        padding: 0 1rem
+        overflow-y: auto
+        overflow-x: hidden
+        align-items: center
+        justify-content: flex-start
+        margin-top: 5rem
+
+        @include mixins.md
+            width: 55%
+            padding: 0
+            position: relative
+            top: 10%
+            margin-top: 0
+            @include mixins.flex-center
+
+        & > div
+            transition: .3s ease 0s
+
+        &::-webkit-scrollbar
+            width: 0
+
+    &-header
+        span, i
+            font-size: 2rem
+
+.bloco-snippet-action > div img
+    width: 100%
+    aspect-ratio: 4/3
+    object-fit: contain
+
+.bloco-snippet-action > div, .modal-empresa-body a
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    width: 130px
+    height: 130px
+    color: RGB(#{variaveis.$gray-10})
+    background-color: RGBA(#{variaveis.$gray-10, .2})
+    border-radius: 2rem
+
+    img
+        max-width: 80px
+
+    span
+        font-size: 1.3rem
+        padding-bottom: 1rem
+
+    i
+        font-size: 3.6rem
+
+.modal-empresa
+    &-header
+        span, i
+            font-size: 2rem
+
+    &-body
+        @include mixins.flex-center
+
+    &:not(.visible)
+        opacity: 0

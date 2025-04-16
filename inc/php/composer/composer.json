@@ -1,0 +1,7 @@
+{
+    "require": {
+        "dompdf/dompdf": "^0.8.3",
+        "phpmailer/phpmailer": "^6.0",
+        "phenx/php-font-lib": "^0.5.1"
+    }
+}

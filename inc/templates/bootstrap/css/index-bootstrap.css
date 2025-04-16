@@ -1,0 +1,30 @@
+#edify #edify-chat .edify-chat-header .actions i.button.open_in_full {
+    font-size: 20px !important;
+    line-height: unset;
+}
+
+#edify .button {
+    height: 46px !important;
+}
+#edify .edify-chat-header-title{
+    font-weight: 700 !important;;
+    font-size: 2rem !important;;
+}
+
+.edify-chat-input input {
+    text-indent: 24px !important;
+    border-radius: 24px !important;
+    font-size: large !important;
+}
+#edify{
+    font-size: 1.5rem !important;;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+#edify #edify-chat .edify-chat-body .edify-info h5 {
+    font-size: 1.6rem !important;
+}
+
+#edify .text p {
+    font-size: 1rem !important;
+}

@@ -1,0 +1,6 @@
+﻿[
+{"ATIVO":"Ativo"},
+{"INATIVO":"Inativo"}
+]
+
+

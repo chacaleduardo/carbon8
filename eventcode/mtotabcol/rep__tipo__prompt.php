@@ -1,0 +1,1 @@
+[{"MASTER":"Master"},{"SECUNDARIO":"Secundário"}]

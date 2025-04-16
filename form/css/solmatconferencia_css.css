@@ -1,0 +1,65 @@
+.justify-content-between{justify-content: space-between;}
+.abrir-camera{
+    font-size: 1.2rem;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-radius: 0 .5rem .5rem 0 !important;
+}
+
+.produto
+{
+    background-color: #ddd;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.produto-header {
+    background-color: #ccc;
+    padding: .5rem;
+}
+
+.produto-header > div
+{
+    border-radius: .25rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eee;
+}
+
+.lotes
+{
+    list-style: none;
+    padding: 0 1rem;
+}
+
+.lote-item
+{
+    background-color: #eee;
+    padding-left: .8rem;
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.lotecons-aberto{
+    background-color: #4cae4c33;
+    border: 1px solid #4cae4c;
+}
+
+.lotecons-pendente
+{
+    background-color: #f6c23e29;
+    border: 1px solid #f6c23e
+}
+
+.letra
+{
+    display: inline;
+    padding: 0.5rem 1rem;
+    background-color: #aaa;
+    border-radius: 0.5rem;
+    color: #fff;
+}

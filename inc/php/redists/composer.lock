@@ -1,0 +1,58 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "4a1fe09485b095f9bf0b191fd69fc664",
+    "packages": [
+        {
+            "name": "palicao/php-redis-time-series",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/palicao/phpRedisTimeSeries.git",
+                "reference": "ca53e7a1e207be925b3f84e0aa5539404a586957"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/palicao/phpRedisTimeSeries/zipball/ca53e7a1e207be925b3f84e0aa5539404a586957",
+                "reference": "ca53e7a1e207be925b3f84e0aa5539404a586957",
+                "shasum": ""
+            },
+            "require": {
+                "ext-redis": "*",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.3",
+                "vimeo/psalm": "^3.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Palicao\\PhpRedisTimeSeries\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alessandro Balasco",
+                    "email": "alessandro.balasco@gmail.com"
+                }
+            ],
+            "time": "2020-10-27T21:07:41+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

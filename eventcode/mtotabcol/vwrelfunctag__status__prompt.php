@@ -1,0 +1,1 @@
+[{"ABERTA":"Aberta"},{"ESTOQUE":"Estoque"},{"ATIVO":"Ativo"},{"DISPONIVEL":"Disponível"},{"MANUTENCAO":"Manutenção"},{"LOCADO":"Locado"},{"INATIVO":"Inativo"},{"DESAPARECIDO":"Desaparecido"},{"BACKUP":"Backup"}]

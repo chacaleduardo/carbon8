@@ -1,0 +1,553 @@
+.opacity04 {
+	opacity: 0.4;
+}
+
+.itemestoque {
+	width: 100%;
+	width: auto;
+	display: inline-block;
+	text-align: right;
+	margin: 3px;
+}
+
+.itemestoque.especial {
+	display: none;
+}
+
+.itemestoque.especial.especialvisivel {
+	display: inline-block !important;
+}
+
+.itemestoque .insumosEspeciais a {
+	color: white;
+}
+
+.excedenteOculto {
+	display: none !important;
+}
+
+.inputmanualtext {
+	width: 220px !important;
+	border: 1px dotted silver !important;
+}
+
+.ativconcluida {
+	background-color: #90EE90 !important;
+	color: black !important;
+}
+
+.ativpendente {
+	background-color: #e6a2a1 !important;
+	color: black !important;
+}
+
+.ativaprovada {
+	background-color: #9DDBFF !important;
+	color: black !important;
+}
+
+.evitaQuebraPagina {
+	page-break-inside: avoid;
+}
+
+.observacao100 {
+	height: 100px;
+	border: 1px solid silver;
+}
+
+#corpoFormalizacao.CONCLUIDO input,
+select:not([name*=_loteativ_status],[id*=opcoes]) {
+	border: 0px !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	width: auto !important;
+}
+
+#corpoFormalizacao.CONCLUIDO div.radio:not(.checked),
+#corpoFormalizacao.CONCLUIDO div.checkbox:not(.checked),
+#corpoFormalizacao.CONCLUIDO input[type=radio],
+#corpoFormalizacao.CONCLUIDO input[type=checkbox] {
+	display: none;
+}
+
+#corpoFormalizacao.CONCLUIDO div.radio label,
+#corpoFormalizacao.CONCLUIDO div.checkbox label {
+	padding-left: 0px;
+}
+
+#corpoFormalizacao.PENDENTE i.fa-thumbs-up,
+#corpoFormalizacao.PENDENTE i.fa-thumbs-down {
+	display: none;
+}
+
+#corpoFormalizacao.CONCLUIDO select:not([name*=_loteativ_status]) {
+	background-color: transparent !important;
+	margin: 0px !important;
+	padding: 0px !important;
+	font-size: inherit !important;
+	line-height: initial !important;
+	height: initial !important;
+	color: black !important;
+}
+
+#corpoFormalizacao.CONCLUIDO select:not([name*=_loteativ_status]) option:not([selected]) {
+	display: none;
+}
+
+.badgepadrao {
+	display: inline-block;
+	min-width: 10px;
+	padding: 3px 7px;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	background-color: #777;
+	border-radius: 10px;
+}
+
+.nodrop {
+	cursor: no-drop;
+}
+
+.escondeatividade .ativpendente {
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.calendariodatahora,
+.selectsala {
+	pointer-events: all !important;
+	opacity: 1 !important;
+}
+
+.desabilitado {
+	background-color: #ece5e5 !important;
+}
+
+.escondeCheckbox {
+	display: block;
+}
+
+label { color: #666 !important; }
+
+.panel-heading { padding: 15px 20px !important; }
+.panel-body { padding: 15px 20px !important; }
+
+.pdLeftOito { padding-left: 8px; }
+.mgRightOito { margin-right: 8px !important; }
+
+.flex-center
+{
+	display: flex;
+    justify-content: center;
+    align-items: center;	
+}
+
+#cbPanelLegenda{display: none;}
+
+@page {
+	size: A4 !important;
+	margin: 0cm;
+	/* Não mostrar os headers default do chrome (Não utilizar !important) */
+	margin-bottom: 1cm;
+	/* mostrar rodapé para paginação */
+	border: 1px solid silver;
+}
+
+@media screen {
+	.print {
+		display: none !important;
+	}
+}
+
+@media print {
+	* {
+		text-shadow: none !important;
+		filter: none !important;
+		-ms-filter: none !important;
+		font-family: Helvetica, Arial;
+		font-size: 12px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		color: #000 !important;
+	}
+
+	#cbSteps {
+		display: none;
+	}
+
+	#statusatividade {
+		display: none;
+	}
+
+	.inputmanualtext {
+		width: 220px !important;
+		border: 0px dotted #FFF !important;
+		text-decoration: underline;
+	}
+
+	.escondeatividade {
+		display: block;
+		opacity: unset;
+	}
+
+	.escondeatividade .ativpendente {
+		pointer-events: none;
+		opacity: inherit !important;
+	}
+
+	.escondeCheckbox {
+		display: none;
+	}
+
+	body {
+		line-height: 1.4em;
+		padding: 0cm;
+		/* Distancia das margens padrão default do browser */
+		margin: 0 0.2cm;
+	}
+
+	.screen {
+		display: none !important;
+		color: #000 !important;
+	}
+
+	.fa {
+		display: none !important;
+	}
+
+	a {
+		color: #000 !important;
+	}
+
+	label{
+		color: #000 !important;
+	}
+
+	.tituloPagina {
+		/* Padding vertical deve coincidir com o cabecalho da pagina */
+		padding-top: 0.5cm;
+		/* Distância da margem superior da página */
+		padding-left: 13px;
+		padding-right: 0px;
+		display: table-cell;
+		/* deve estar contido em um TH/TD */
+		white-space: nowrap;
+	}
+
+	.logoSup {
+		width: 25%;
+		display: inline-block;
+		height: inherit;
+		line-height: inherit;
+		vertical-align: middle;
+	}
+
+	.logoSup img {
+		vertical-align: middle;
+	}
+
+	.tituloDoc {
+		width: 60%;
+		display: inline-block;
+		height: inherit;
+		line-height: 0.5cm;
+		text-align: center;
+		font-size: 0.35cm;
+		font-weight: bold;
+		vertical-align: bottom;
+	}
+
+	.tituloAdicional {
+		width: 20%;
+		display: inline-block;
+	}
+
+	.cabecalhoPagina {
+		padding-left: 13px;
+		padding-right: 13px;
+		color: #000 !important;
+	}
+
+	.cabecalhoPagina>hr {
+		margin: 0cm 0cm 0.3cm 0cm;
+		border-top: none;
+		border-bottom: 2px solid gray;
+	}
+
+	.row {
+		display: table;
+		margin: 0mm 0mm;
+		/* reset nas configurações de -15 do bootstrap */
+	}
+
+	.row.grid .col {
+		border: 1px solid #777777;
+	}
+
+	.row.grid .col:first-child {
+		border-top: 1px solid silver;
+	}
+	
+	.col {
+		display: table-cell;
+		white-space: nowrap;
+		padding: 1.5mm 1mm;
+	}
+
+	[class*="col-"] {
+		width: auto !important;
+	}
+
+	.col.grupo .titulogrupo {
+		margin: 0px;
+		border-bottom: 1px dotted silver;
+		color: #777777;
+		font-weight: bold;
+		margin-bottom: 2mm;
+	}
+
+	.rot {
+		color: #777777;
+		overflow: hidden;
+		font-size: 12px;
+	}
+
+	.checkbox {
+		margin: 0px;
+		line-height: normal;
+	}
+
+	.quebralinha {
+		white-space: normal;
+	}
+
+	[class*='margem0.0'] {
+		margin: 0 0;
+	}
+
+	.papel {
+		padding: 0px;
+	}
+
+	/* Esconder na impressão */
+	#cbNovo,
+	#cbSalvar,
+	#cbModuloHeaderBg,
+	#cbModuloHeader,
+	.cbFecharForm {
+		display: none;
+	}
+
+	div.checkbox:not(.checked) {
+		display: none;
+	}
+
+	input[type=checkbox]:checked {
+		display: none;
+	}
+
+	div.checkbox[inputmanual=check]:before {
+		content: '';
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		border: solid #000;
+		border-width: 1px;
+		position: absolute;
+	}
+
+	div.checkbox div[inputmanual=linha] {
+		border-bottom: 2px dotted gray;
+		width: 100px;
+		display: inline-grid;
+	}
+
+	#corpoFormalizacao.CONCLUIDO div.radio label,
+	#corpoFormalizacao.CONCLUIDO div.checkbox label {
+		padding-left: 17px;
+	}
+
+	.badge {
+		color: #fff !important;
+		background-color: #777 !important;
+	}
+
+	.tituloAtividade {
+		font-size: 0.45cm;
+		color: #000 !important;
+	}
+
+	.quadroOpcoes h6 {
+		background-color: #e7e7e7 !important;
+		margin-bottom: .3cm;
+		margin-top: 0px;
+		color: #000 !important;
+	}
+
+	.tab_insumo th {
+		background-color: #e7e7e7 !important;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	.tab_insumo th {
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
+		color: #000 !important;
+	}
+
+	.tab_insumo td {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		padding-bottom: 0px !important;
+	}
+
+	.insumosEspeciais a i.fa {
+		display: inline-block !important;
+	}
+
+	input,
+	select {
+		border: 0px !important;
+		-webkit-box-shadow: none !important;
+		box-shadow: none !important;
+		width: auto !important;
+	}
+
+	select {
+		-moz-appearance: none !important;
+		-webkit-appearance: none !important;
+		background-color: transparent !important;
+		margin: 0px !important;
+		padding: 0px !important;
+		font-size: inherit !important;
+		line-height: initial !important;
+		height: initial !important;
+	}
+
+	select option:not([selected]) {
+		display: none;
+	}
+
+	table {
+		width: 100% !important;
+	}
+
+	table tbody td * {
+		vertical-align: baseline !important;
+		color: #000 !important;
+	}
+
+	a[href]:after {
+		content: none !important;
+	}
+
+	div.radio:not(.checked) {
+		display: none;
+	}
+
+	div.radio.checked input[type=radio] {
+		display: none;
+	}
+
+	.text-right {
+		text-align: left !important;
+	}
+
+	#cbModuloForm {
+		display: block !important;
+		/* Permitir break-inside */
+	}
+
+	div.panel.quebraPagina {
+		display: block;
+		page-break-after: always !important;
+		padding: 0 !important;
+		margin-top: 0 !important;
+	}
+
+	.panel-heading {
+		background-color: #d0d0d0 !important;
+	}
+
+	.panel-default {
+		border: 0px;
+	}
+
+	.itemestoque {
+		border: 0px;
+	}
+
+	#alertaStatus:not(.ABERTO),
+	#alertaStatus:not(.ABERTO) .notProducao {
+		display: none;
+	}
+
+	#alertaStatus .TRIAGEM .notProducao {
+		display: block;
+	}
+
+	.escondeimpressao.itemestoque.especial.especialvisivel {
+		display: none !important;
+	}
+
+	div.radio.checked label {
+		padding-left: 0px !important;
+	}
+
+	/*LTM 28-10-2020 379901 - Alterado para apacer as Partidas*/
+	.badgepadrao {
+		color: black;
+	}
+
+	.branco {
+		color: black;
+	}
+
+	.itemestoque .insumosEspeciais a {
+		color: black;
+	}
+
+	.validadeprodserv {
+		display: none;
+	}
+}
+
+.messageboxok {
+	width: auto;
+	margin-left: 30px;
+	border: 1px solid #349534;
+	background: #C9FFCA;
+	padding: 3px;
+	font-weight: bold;
+	color: #008000;
+}
+
+.messageboxerror {
+	width: auto;
+	margin-left: 30px;
+	border: 1px solid #CC0000;
+	background: #F7CBCA;
+	padding: 3px;
+	font-weight: bold;
+	color: #CC0000;
+}
+
+.table100
+{
+	width: 100% !important;
+}
+
+.campo-lote-invalido {
+	background-color: #fffc9d !important;
+}
+
+.disabled-all * {
+	pointer-events: none;
+}

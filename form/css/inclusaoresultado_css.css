@@ -1,0 +1,54 @@
+.ui-autocomplete {
+  width: 500px !important;
+  font-size: 9px;
+}
+
+.striped>.row:nth-of-type(odd) {
+  background-color: white;
+}
+
+.diveditor {
+  border: 1px solid gray;
+  background-color: white;
+  color: black;
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  width: 800px;
+  height: 256px;
+  word-wrap: break-word;
+  overflow: auto;
+  padding: 5px;
+}
+
+.itemestoque {
+  Xwidth: 100%;
+  width: auto;
+  display: inline-block;
+  text-align: right;
+}
+
+#grupo-exames .grupo-exames-item:not(:has(.teste-item)) {
+  display: none !important;
+}
+
+.resultado-obs {
+  height: 100px;
+  overflow-y: auto;
+}
+
+.campo-resultado {
+  overflow-y: hidden;
+}
+
+#info-btn {
+    width: 15px;
+    height: 15px;
+    background-color: #337ab7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+}

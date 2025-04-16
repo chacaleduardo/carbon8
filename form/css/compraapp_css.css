@@ -1,0 +1,34 @@
+.select-custom option{color: #000;}
+#cbContainer{display: block !important;}
+.row{margin:0 !important}
+.form-valor{transition: .2s ease 0;}
+.form-valor input
+{
+    background: none !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.form-valor{border-bottom: 1px solid #fff;}
+.form-valor:has(input:focus){border-width: 2px;}
+input.h1{
+    font-size: 26px !important;
+}
+#webCamera{
+    max-width: 100%;
+	height: auto;
+	background-color: whitesmoke;
+}
+.imgtaken{
+    border-radius: 10%;
+    max-width: 100%;
+}
+.display-none
+{
+    display: none;
+}
+
+.btn-calendario{font-size: 1.3rem; margin-right: .5rem;}
+.pl-10{ padding-left: 10px; }

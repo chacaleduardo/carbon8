@@ -1,0 +1,369 @@
+@import 'padrao.css';
+
+.dropz{
+	border: 2px dashed silver;
+	background-color: white;
+	display: inline-block;
+	padding: 10px;
+	color: silver;
+	cursor: pointer;
+}
+.dropz:hover {
+	border-color: #4cae4c;
+	color: #5cb85c;
+}
+.dropz > i {
+	pointer-events: none;
+	display: block;
+	text-align: center;
+}
+.messageboxok{
+	width:auto;
+	margin-left:30px;
+	border:1px solid #349534;
+	background:#C9FFCA;
+	padding:3px;
+	font-weight:bold;
+	color:#008000;
+}
+.messageboxerror{
+	width:auto;
+	margin-left:30px;
+	border:1px solid #CC0000;
+	background:#F7CBCA;
+	padding:3px;
+	font-weight:bold;
+	color:#CC0000;
+}
+.hidden {
+  display: none;
+}
+
+#tbItensCadastrado, #tbItensNaoCadastrados { width: 100% !important;}
+
+i.tip:hover {
+    cursor: hand;
+    position: relative
+}
+i.tip span {
+    display: none
+}
+i.tip:hover span {
+    border: #c0c0c0 1px dotted;
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    background: #f0f0f0 no-repeat 100% 5%;
+    left: 0px;
+    margin: 10px;
+    width: 400px;
+    position: absolute;
+    top: 10px;
+    text-decoration: none
+}
+.ulitens{
+	padding-left: 0px;
+	border: none;
+	background-color:white;
+	border: 1px solid;
+	border-color: silver;
+}
+.liitens{
+	list-style: none;
+	border-bottom: 5px solid whitesmoke;
+	padding: 1px 10px;
+}
+.liitens ul{
+	padding-left: 10px;
+}
+.popover {
+	width: 230px !important;
+}
+.desabilitado{
+	background-color:#ece5e5 !important;
+}
+.numeroNf{
+	display: none; 
+	width: 200px; 
+	position: absolute;
+	top: 35px;
+	right: -180px;
+}
+
+.alinhamento-esquerda
+{
+	margin-left: -10px !important;
+}
+
+.alinhamento-esquerda-20
+{
+	margin-left: -20px !important;
+}
+
+.top-align-sete
+{
+	margin-top: 7px !important;
+}
+
+.custom-sidebar
+{
+    width:165px !important;
+}
+
+.espaco-previsao
+{
+    width:110px !important;
+}
+
+.alinhar-texto-cabecalho
+{
+	margin-top: 8px;
+    margin-bottom: -5px;
+}
+
+.bnt-lg-sete
+{
+	padding: 10px 7px;
+}
+
+.padding-zero
+{
+	padding: 0px;
+}
+
+.nao-cadastrado
+{
+	color: #666;
+    background-color: #e6e6e6;
+    font-weight: bold;
+    margin-top: 0px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+	font-size: 1rem;
+	padding: 5px 0px 5px 10px !important;
+}
+
+.alinhar-direita
+{
+	text-align: right;
+}
+
+.alinhar-centro
+{
+	text-align: center;
+}
+
+.alerta-informacao
+{
+	clear: both; 
+	float: right;
+}
+.rdv{position: absolute;right: 1rem;top: -0.5rem;}
+.rdv label{font-size: 8px !important;}
+
+.pd-left-top
+{
+	padding-left: 10px;
+    padding-top: 3px;
+}
+
+.cobrar {
+	width: 2% !important;
+}
+
+.cp_qtdsol {
+	width: 7% !important;
+}
+
+.cp_qtd {
+	width: 7% !important;
+}
+
+.cp_un {
+	width: 2% !important;
+}
+
+.cp_descricao {
+	width: 50% !important;
+}
+
+.cp_grupoes{
+	width: 2% !important;
+}
+
+.cp_taxaconsersao{
+	width: 13% !important;
+}
+
+.cp_valorundolar{
+	width: 12% !important;
+}
+
+.cp_valorun{
+	width: 12% !important;
+}
+
+.cp_desc{
+	width: 12% !important;
+}
+
+.cp_total_imposto {
+	width: 4% !important;
+	text-align: center;
+}
+
+.cp_valor {
+	width: 12% !important;
+}
+
+.cp_tag {
+	width: 4% !important;
+}
+
+.bc-cinza{
+	background-color: #f0f0f0 !important;
+}
+
+.div_ncm {
+	border: 1px solid #9d9d9d;
+    padding: 5px;
+    width: min-content;
+}
+
+.modal-detalhes {
+	padding: 10px 0px 10px 10px;
+}
+
+.w-8 {width: 8% !important;}
+
+#cbModal .modal-content {
+	overflow: visible !important;
+}
+.bckwh {background: white; padding-bottom: 30px;}
+.panelAbas{
+    background-color: #FFF;
+    border: none; 
+}
+.pd-top {padding-top: 40px;}
+.tab-content{
+    background-color: whitesmoke;
+    border: 1px solid #ddd;
+}
+.tabs-container{
+    margin: 0 2px 0 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: #AAAAAA;
+    font-size: 16px;
+}
+.tabs-container>a{
+    color: #f8f9fc !important;
+}
+.tabs-container.active>a{
+    color: #2f3237 !important;
+}
+.tabs-container:after {
+    content: '.';
+    display: block;
+    clear: both;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    visibility: none;
+}
+.tabs-container.active>a, .nfentrada_itens{
+    color: #2f3237 !important;
+	font-weight: bold;
+}
+.form-group { margin-bottom: 3px !important; }
+.nav-tabs {
+    border-bottom: none;
+}
+.nav-tabs>li>a:hover{
+    background-color: #AFAFAF;
+    color: #2f3237 !important;
+}
+.nav-tabs>li.active>a{
+    background-color: whitesmoke !important;
+}
+label {font-size: 12px !important;}
+.bg-purple {background: rebeccapurple; color: white;}
+.bg-wine {background: darkred; color: white;}
+
+.pb25 {padding-bottom: 25px;}
+.pd-left-top { 
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.pl7 { padding-left: 7px; }
+.pl10 { padding-left: 10px; }
+.pl22 { padding-left: 22px; }
+.pt25 { padding-top: 25px !important; }
+.previous { font-size: 1rem; }
+.dataTables_length { padding-bottom: 20px; }
+.dataTables_length select { width: 60px; margin-left: 10px; margin-right: 10px;}
+#tbItensCadastrado .cabitem > th, 
+#tbItensNaoCadastrados .cabitem > th, 
+#tbItensCadastrado, #tbItensNaoCadastrados {border-color: #ddd !important;}
+#tbItensCadastrado input { border: none; }
+#tbItensNaoCadastrados input { border: none; }
+.colorirVermelho { color: red !important;}
+
+#cbModalTitulo{
+    line-height: 2.1rem !important;
+	margin-top: 10px;
+}
+
+.mt11mf5{
+	margin-top: 4px; margin-left: 10px;
+}
+
+.height-18 {
+	height: 18px !important;
+	margin: 0px !important;
+}
+
+.atalhoIcone{
+	padding: 1px 2px 1px 5px !important;
+}
+
+.label.alert-warning-concluido {
+    color: #8a6d3b;
+    background-color: #eee;
+    border-color: #faebcc;
+    font-size: 10px;
+    padding: 4px 4px;
+    border-radius: 3px;
+    -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, .05);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, .05);
+}
+
+.bloqueio-input{
+	background-color: #eee !important;
+}
+
+.ag-theme-alpine {
+	width: 100%;   /* Defina a largura como 100% */
+}
+
+.td-padding {
+	padding: 2px 8px 0px 8px !important;
+}
+
+.p0{
+	padding: 0px !important;
+}
+
+.borderdivergencia {
+	border: 1px solid #ddd;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.fan-2x {
+	font-size: 15px;
+}
+
+#fdata1:not(.desabilitado) + i {
+	opacity: 0.5;
+}

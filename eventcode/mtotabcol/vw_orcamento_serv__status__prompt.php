@@ -1,0 +1,1 @@
+[{"ABERTO":"Aberto"},{"ENVIADO":"Enviado"},{"APROVADO":"Aprovado"},{"REPROVADO":"Reprovado"}]

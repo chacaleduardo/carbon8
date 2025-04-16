@@ -1,0 +1,1 @@
+[{"ABERTO":"Aberto"},{"INATIVO":"Inativo"},{"PENDENTE":"Pendente"},{"QUITADO":"Quitado"},{"CANCELADO":"Cancelado"}]

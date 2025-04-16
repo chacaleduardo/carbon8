@@ -1,0 +1,1 @@
+[{"ATIVO":"Ativo"},{"DISPONIVEL":"Disponível"},{"RESERVADO":"Reservado"},{"FINALIZADO":"Finalizado"},{"CANCELADO":"Cancelado"}]

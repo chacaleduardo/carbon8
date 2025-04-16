@@ -1,0 +1,40 @@
+@use 'variaveis'
+
+// BORDA    
+@each $chave, $valor in variaveis.$largura-borda
+    .border-#{$chave}, .border-l-#{$chave}, .border-x-#{$chave}
+        border-left-style: solid
+        border-left-width: $valor
+
+    .border-#{$chave}, .border-t-#{$chave}, .border-y-#{$chave}
+        border-top-style: solid
+        border-top-width: $valor
+
+    .border-#{$chave}, .border-r-#{$chave}, .border-x-#{$chave}
+        border-right-style: solid
+        border-right-width: $valor
+
+    .border-#{$chave}, .border-b-#{$chave}, .border-y-#{$chave}
+        border-bottom-style: solid
+        border-bottom-width: $valor
+
+// DISPLAY
+@each $valor in variaveis.$display
+    .#{$valor}
+        display: #{$valor}
+
+@for $i from 0 through 10
+    // OPACIDADE
+    .opacity-#{$i*10}
+        opacity: #{calc($i/10)} !important
+
+    // Largura
+    .w-#{calc($i*10)}
+        width: $i*10% !important
+
+    // Alturas
+    .h-#{calc($i*10)}
+        height: $i*10% !important
+
+.backdrop-blur
+    backdrop-filter: blur(1px)
